@@ -1,7 +1,4 @@
-require "cocoapods/search/version"
-
-module Cocoapods
-  module Search
-    # Your code goes here...
-  end
-end
+require 'cocoapods/search/version'
+require 'cocoapods/search/pod'
+require 'cocoapods/search/rendering'
+require 'cocoapods/search/cli'
