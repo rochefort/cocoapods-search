@@ -5,8 +5,6 @@ module Cocoapods::Search
     map '-v' => :version,
         '--version' => :version
 
-    option :from, :required => true
-
     default_command :search
 
     desc :version, 'Show version'
