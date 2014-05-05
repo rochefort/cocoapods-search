@@ -11,7 +11,7 @@ describe Cocoapods::Search::Cli do
         Open3.should_receive(:capture2).and_return(dummy_pod_search_nothing)
       end
       it 'should raise LibraryNotFound' do
-        expect{@cli.search('no_match_pod_name')}.to raise_error(Cocoapods::Search::LibraryNotFound)
+        expect{ @cli.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
       end
     end
 
@@ -24,7 +24,7 @@ describe Cocoapods::Search::Cli do
       end
 
       it 'should display pods ordering by score' do
-        capture(:stdout) { @cli.search('sqlite') }.should == <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CsvToSqlite (1.0)                            42    17     5
