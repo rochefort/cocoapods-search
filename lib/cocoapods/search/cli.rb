@@ -43,6 +43,7 @@ module Cocoapods::Search
       end
 
       def pod_search
+        # TODO: status is unused variable
         pod_search_result, status = Open3.capture2("pod search #{@keyword}")
         pods = pod_search_result.split(/\n{2,3}->/)
         pods.delete("")
