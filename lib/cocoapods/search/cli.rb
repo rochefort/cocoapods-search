@@ -1,5 +1,6 @@
 require 'mechanize'
 require 'open3'
+require 'uri'
 
 module Cocoapods::Search
   class Cli
@@ -7,6 +8,10 @@ module Cocoapods::Search
 
     def initialize
       @agent = Mechanize.new
+      proxy = URI.parse(ENV['http_proxy']) if ENV['http_proxy']
+      if proxy
+        @agent.set_proxy(proxy.host, proxy.port, proxy.user, proxy.password)
+      end
     end
 
     def search(keyword)
