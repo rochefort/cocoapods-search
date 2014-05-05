@@ -1,7 +1,9 @@
 language: ruby
 rvm:
   - 1.9.3
-
+before_script:
+  - brew update
+  - brew upgrade xctool
 before_install:
  - gem install cocoapods
  - pod setup
