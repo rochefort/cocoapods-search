@@ -8,10 +8,10 @@ describe Cocoapods::Search::Cli do
         stub_request_on_github 'https://github.com/AaronBratcher/ABSQLite'
         stub_request_on_github 'https://github.com/dodikk/CsvToSqlite'
         stub_request_on_github 'https://github.com/youknowone/sqlite3-objc'
+        Open3.should_receive(:capture2).and_return(dummy_pod_search_result)
       end
 
       it 'should display pods ordering by score' do
-        Open3.should_receive(:capture2).and_return(dummy_pod_search_result)
         capture(:stdout) { @cli.search('sqlite') }.should == <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
