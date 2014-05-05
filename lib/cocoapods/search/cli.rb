@@ -1,4 +1,5 @@
 require 'mechanize'
+require 'open3'
 
 module Cocoapods::Search
   class Cli
@@ -34,7 +35,7 @@ module Cocoapods::Search
       end
 
       def pod_search
-        pod_search_result = `pod search #{@keyword}`
+        pod_search_result, status = Open3.capture2("pod search #{@keyword}")
         pods = pod_search_result.split(/\n{2,3}->/)
         pods.delete("")
         pods
