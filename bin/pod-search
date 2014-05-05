@@ -3,5 +3,4 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib')
 require 'cocoapods/search'
 
-cs = Cocoapods::Search::Cli.new(ARGV[0])
-cs.search
+Cocoapods::Search::Command.start
