@@ -2,9 +2,21 @@ require 'spec_helper'
 
 describe Cocoapods::Search::Cli do
   context '#search' do
+    before do
+      @cli = Cocoapods::Search::Cli.new
+    end
+
+    context 'with nonexistance pods' do
+      before do
+        Open3.should_receive(:capture2).and_return(dummy_pod_search_nothing)
+      end
+      it 'should raise LibraryNotFound' do
+        expect{@cli.search('no_match_pod_name')}.to raise_error(Cocoapods::Search::LibraryNotFound)
+      end
+    end
+
     context 'with exisiting pods' do
       before do
-        @cli = Cocoapods::Search::Cli.new
         stub_request_on_github 'https://github.com/AaronBratcher/ABSQLite'
         stub_request_on_github 'https://github.com/dodikk/CsvToSqlite'
         stub_request_on_github 'https://github.com/youknowone/sqlite3-objc'
@@ -25,6 +37,10 @@ describe Cocoapods::Search::Cli do
   end
 
   private
+    def dummy_pod_search_nothing
+      "[!] Unable to find a pod with name matching `no_match_pod_name'"
+    end
+
     def dummy_pod_search_result
       <<-'EOS'.gsub(/^\s+\|/, '')
         |

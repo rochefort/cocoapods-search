@@ -19,6 +19,9 @@ module Cocoapods::Search
       return invoke :help unless name
       cs = Cocoapods::Search::Cli.new
       cs.search(name)
+    rescue LibraryNotFound => e
+      say e.message, :red
+      abort
     end
 
     private
