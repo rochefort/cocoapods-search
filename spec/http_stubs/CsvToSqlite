@@ -1,0 +1,1048 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>dodikk/CsvToSqlite · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="dodikk/CsvToSqlite" name="twitter:title" /><meta content="CsvToSqlite - A library to import CSV data to the SQLite database on your iPhone" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/396451?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/396451?s=400" property="og:image" /><meta content="dodikk/CsvToSqlite" property="og:title" /><meta content="https://github.com/dodikk/CsvToSqlite" property="og:url" /><meta content="CsvToSqlite - A library to import CSV data to the SQLite database on your iPhone" property="og:description" />
+
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="3A9D7ECD:6B84:489978:5367BF1C" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="3YLL/X0jhp6UzrMD4bSRgOiWHgtpbdlpXHZwCUsx9B6ZAaekoXgnz9NpO/Ij7H/cjIN8OdoAoZlL6wsAgDQV1A==" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-825241e13de547a733c8a9cc535c8f6b411b52c1.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-0c03a1f6ffa15e379ec26513a90980fce28e78d9.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+        <script crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/frameworks-2f6219cf5b1c2bab818848f5705fab73e1f57022.js" type="text/javascript"></script>
+        <script async="async" crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/github-ceedfd14494501a450c1f2934fa5c21858769efb.js" type="text/javascript"></script>
+        
+        
+      <meta http-equiv="x-pjax-version" content="d9485357ac507306950c095f53ae7c4e">
+
+      
+  <meta name="description" content="CsvToSqlite - A library to import CSV data to the SQLite database on your iPhone" />
+
+  <meta content="396451" name="octolytics-dimension-user_id" /><meta content="dodikk" name="octolytics-dimension-user_login" /><meta content="4013367" name="octolytics-dimension-repository_id" /><meta content="dodikk/CsvToSqlite" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="4013367" name="octolytics-dimension-repository_network_root_id" /><meta content="dodikk/CsvToSqlite" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/dodikk/CsvToSqlite/commits/master.atom" rel="alternate" title="Recent Commits to CsvToSqlite:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fdodikk%2FCsvToSqlite">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="dodikk/CsvToSqlite"
+      data-branch="master"
+      data-sha="5af4f58c98e3d10b697c3d7cae98803d5c20ec14"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="dodikk/CsvToSqlite" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+    <a href="/login?return_to=%2Fdodikk%2FCsvToSqlite"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>Star
+  </a>
+
+    <a class="social-count js-social-count" href="/dodikk/CsvToSqlite/stargazers">
+      17
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fdodikk%2FCsvToSqlite"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/dodikk/CsvToSqlite/network" class="social-count">
+        5
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/dodikk" class="url fn" itemprop="url" rel="author"><span itemprop="title">dodikk</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/dodikk/CsvToSqlite" class="js-current-repository js-repo-home-link">CsvToSqlite</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/dodikk/CsvToSqlite" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /dodikk/CsvToSqlite">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/dodikk/CsvToSqlite/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /dodikk/CsvToSqlite/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/dodikk/CsvToSqlite/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /dodikk/CsvToSqlite/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/dodikk/CsvToSqlite/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /dodikk/CsvToSqlite/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/dodikk/CsvToSqlite/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /dodikk/CsvToSqlite/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/dodikk/CsvToSqlite/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /dodikk/CsvToSqlite/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/dodikk/CsvToSqlite.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/dodikk/CsvToSqlite.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/dodikk/CsvToSqlite" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/dodikk/CsvToSqlite" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+                <a href="/dodikk/CsvToSqlite/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download dodikk/CsvToSqlite as a zip file"
+                   title="Download dodikk/CsvToSqlite as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>A library to import CSV data to the SQLite database on your iPhone</p>
+    </div>
+
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/dodikk/CsvToSqlite/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              156
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/dodikk/CsvToSqlite/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            7
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/dodikk/CsvToSqlite/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            3
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+          <a href="/dodikk/CsvToSqlite/graphs/contributors" class="js-deferred-content" data-url="/dodikk/CsvToSqlite/contributors_size">
+            <span class="num">
+              <span class="octicon octicon-organization"></span>
+            </span>
+            Fetching contributors
+          </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/dodikk/CsvToSqlite/search?l=objective-c">
+                <span class="color-block language-color" style="background-color:#438eff;"></span>
+                <span class="lang">Objective-C</span>
+                <span class="percent">97.6%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/dodikk/CsvToSqlite/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">1.1%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span data-lang="Other" class="color-block language-color"></span>
+                <span class="lang">Other</span>
+                <span class="percent">1.2%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#ccc">
+  <span class="language-color" style="width:97.6%; background-color:#438eff;" itemprop="keywords">Objective-C</span><span class="language-color" style="width:1.1%; background-color:#701516;" itemprop="keywords">Ruby</span><span class="language-color" style="width:1.2%; background-color:#ccc;" itemprop="keywords">Other</span>
+    </a>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/dodikk/CsvToSqlite/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped tooltipped-s" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/1-appledoc"
+                 data-name="1-appledoc"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1-appledoc">1-appledoc</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/2-framework"
+                 data-name="2-framework"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2-framework">2-framework</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/AsyncQueries"
+                 data-name="AsyncQueries"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="AsyncQueries">AsyncQueries</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/BeforeAsyncQueries"
+                 data-name="BeforeAsyncQueries"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="BeforeAsyncQueries">BeforeAsyncQueries</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/gh-pages"
+                 data-name="gh-pages"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="gh-pages">gh-pages</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/readme"
+                 data-name="readme"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="readme">readme</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/v1.0"
+                 data-name="v1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0">v1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/0.2-ImportQueries"
+                 data-name="0.2-ImportQueries"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.2-ImportQueries">0.2-ImportQueries</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/dodikk/CsvToSqlite/tree/0.1-NoDb"
+                 data-name="0.1-NoDb"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.1-NoDb">0.1-NoDb</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/dodikk/CsvToSqlite" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">CsvToSqlite</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2Fdodikk%2FCsvToSqlite" aria-label="Sign in to make or propose changes" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/dodikk/CsvToSqlite/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+
+
+  
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/dodikk/CsvToSqlite/commit/ee71bf18be66f9ec8aa974668aca02b5480b44ca" class="message" data-pjax="true" title="added benchmarking info">added benchmarking info</a>
+        
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="ee71bf18be66f9ec8aa974668aca02b5480b44ca" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/dodikk/CsvToSqlite/commit/ee71bf18be66f9ec8aa974668aca02b5480b44ca" class="sha-block" data-pjax>latest commit <span class="sha">ee71bf18be</span></a>
+
+      <div class="authorship">
+        <img alt="Oleksandr Dodatko" class="gravatar js-avatar" data-user="396451" height="20" src="https://avatars0.githubusercontent.com/u/396451?s=140" width="20" />
+        <span class="author-name"><a href="/dodikk" data-skip-pjax="true" rel="author">dodikk</a></span>
+        authored <local-time class="updated" datetime="2014-03-16T13:40:43+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-03-16 13:40:43 +0200">March 16, 2014</local-time>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="file-wrap">
+    <table class="files" data-pjax>
+
+      
+<tbody class="js-deferred-content"
+  data-url="/dodikk/CsvToSqlite/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/tree/master/CsvProfiler" class="js-directory-link" id="4050d59e7677696c256e425e385e998a-7e2ace208f45030f8bc2f2af8a5cebbf907b8b75" title="CsvProfiler">CsvProfiler</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/d1440fe28c370a86abaa9a3e567d0cbc09d2c84d" class="message" data-pjax="true" title="added a target for test profiling">added a target for test profiling</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-09-25T16:00:46+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-09-25 16:00:46 +0300">September 25, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/tree/master/CsvToSqlite.xcodeproj" class="js-directory-link" id="1fd469775dcbb9ed05c6d66751e41a1b-a9238d627990ad7bc32748a114dee28e8cf38449" title="CsvToSqlite.xcodeproj">CsvToSqlite.xcodeproj</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/tree/master/CsvToSqlite" class="js-directory-link" id="a9f44b38d235c5999fe9acbb46d105a9-2ed8b8acf2a02bc8e9a7f17b8c1f462dab3f8456" title="CsvToSqlite">CsvToSqlite</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/a345dc8d711feb895749715cc59a943666409282" class="message" data-pjax="true" title="[cpp] Extracted headers to pch">[cpp] Extracted headers to pch</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-12-31T12:15:31+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-12-31 12:15:31 +0200">December 31, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/tree/master/CsvToSqliteTests" class="js-directory-link" id="5e5a4f725e86963d8c1c90fc3cc6b0ac-0a23b1c458d20f69ed597e7a380fef4999725949" title="CsvToSqliteTests">CsvToSqliteTests</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/593397be7e6b774ec145c9a8dcda3652af1fb19d" class="message" data-pjax="true" title="using arm64 cast">using arm64 cast</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-12-20T12:05:47+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-12-20 12:05:47 +0200">December 20, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/tree/master/TestData" class="js-directory-link" id="1aed6bbc7f316f4650bef7334b9352e1-186364e41235ba0ca20705e737bcad57051fbbf6" title="TestData">TestData</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/b091b99cc12198d04f7f76b14d038944d69f45d6" class="message" data-pjax="true" title="vlg - post review fixes.">vlg - post review fixes.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-08-17T16:28:24+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-08-17 16:28:24 +0300">August 17, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-0e86d6f0e8dcdc638c0532bdf2145b9fe70faeb2" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/76fd9294f86bc8bea533892cc5c6ae2a0c8775a0" class="message" data-pjax="true" title="Moved mocks to a library as they are used in the other project">Moved mocks to a library as they are used in the other project</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-04-18T17:24:30+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-04-18 17:24:30 +0300">April 18, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/AUTHORS" class="js-directory-link" id="3d350169560e75d0cf9fc8e3574a3639-e2a2d495a362ae00eb219cbc530c08c73ae340c9" title="AUTHORS">AUTHORS</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/8bb3467ec017703764475dd80140fa51c9d5cb62" class="message" data-pjax="true" title="added project info">added project info</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-04-13T10:30:13+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-04-13 10:30:13 +0300">April 13, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/CsvToSqlite.podspec" class="js-directory-link" id="d029b9e105ca0d188049f775d62e1dbb-663f7cd169537ee8741cd9c2232e88b59cf72d0d" title="CsvToSqlite.podspec">CsvToSqlite.podspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/eacf91885a08c543b1adf3833d6da7449d5fe582" class="message" data-pjax="true" title="[podspec] Dependency on FMDB 2.0">[podspec] Dependency on FMDB 2.0</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-12-30T10:37:42+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-12-30 10:37:42 +0200">December 30, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/CsvToSqliteTests%20copy-Info.plist" class="js-directory-link" id="7adc68873e512973e82285832b8b67de-7a83a22a5ee7fd5b804a2d54aaf18769ab75a6ea" title="CsvToSqliteTests copy-Info.plist">CsvToSqliteTests copy-Info.plist</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/8ca081528a10ff25235c62b88f2ee81bf6cd57b9" class="message" data-pjax="true" title="Added test configuration for CI">Added test configuration for CI</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-04-12T17:00:32+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-04-12 17:00:32 +0300">April 12, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/LICENSE-BSD.txt" class="js-directory-link" id="ad361461cd7ab31696636ea7e70d5013-0cf649474577c426aa80aa0f1d0e9def5e65bcb7" title="LICENSE-BSD.txt">LICENSE-BSD.txt</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/fb22e8231f9205ad6c1898b2537d55a9353d2eb6" class="message" data-pjax="true" title="[podspec] added license file">[podspec] added license file</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-12-27T12:10:22+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-12-27 12:10:22 +0200">December 27, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-a1180fc0dd1eb26ccc5a8e231d5d938c2c41b7ec" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/ee71bf18be66f9ec8aa974668aca02b5480b44ca" class="message" data-pjax="true" title="added benchmarking info">added benchmarking info</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-03-16T13:40:43+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-03-16 13:40:43 +0200">March 16, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/SetupDependencies.sh" class="js-directory-link" id="b66b4c55207b39d1651631ecacc960ef-be4dc8be3f5d37ddb2b8ac7248df6be0916cbd7f" title="SetupDependencies.sh">SetupDependencies.sh</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/7f450e06afd253e8b1946d82bbe90755c1d92ec8" class="message" data-pjax="true" title="Added DB protocols dependence">Added DB protocols dependence</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-09-12T13:02:09+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-09-12 13:02:09 +0300">September 12, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/libCoverageFopenFix.a" class="js-directory-link" id="68d5063a7abba9ee98c90ecab5e16fc2-30d9405ed48e5869dd9af44fa5faaa3f4492a74d" title="libCoverageFopenFix.a">libCoverageFopenFix.a</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/90eab6546944e441a9a3ab4fb0e98c6e5767412a" class="message" data-pjax="true" title="Added coverage support.">Added coverage support.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2012-04-12T19:10:25+03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2012-04-12 19:10:25 +0300">April 12, 2012</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/blob/master/libXCode5gcovPatch.a" class="js-directory-link" id="fc4ec5fcb4707059996bd58d7653bf77-574e33a5a4ccee786370723a250309eec350e94c" title="libXCode5gcovPatch.a">libXCode5gcovPatch.a</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/dodikk/CsvToSqlite/commit/bb534a249153ceb8703873ccdf9a104c5a491a29" class="message" data-pjax="true" title="[ci] fixed coverage for Xcode5">[ci] fixed coverage for Xcode5</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-01-27T10:05:30+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-01-27 10:05:30 +0200">January 27, 2014</local-time></span></td>
+    </tr>
+</tbody>
+
+    </table>
+  </div>
+
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h3>
+<a name="user-content-library" class="anchor" href="#library"><span class="octicon octicon-link"></span></a>Library</h3>
+
+<p>This is a library for parsing simple *.CSV files.<br>
+The library does not fully comply to rfc4180 because we do not support quoted values.</p>
+
+<p>The main goal is importing *.CSV data to the SQLite database with the minimal memory footprint.</p>
+
+<pre><code>License : BSD
+</code></pre>
+
+<h3>
+<a name="user-content-features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<p>The library performs importing of CSV files to SQLite tables. We made our best to make it use as little memory as possible.</p>
+
+<ol>
+<li>
+<strong>Clear Objective-C interface</strong> - the user sees only the facade class in Objective-C. All the tricks are </li>
+<li>
+<strong>Low memory consuption</strong> - C++ iostreams are used to avoid memory warnings since datasets may be fairly large</li>
+<li>
+<strong>Multiple line endings support</strong> - both Windows ( CR LF ) and Unix (LF ) line endings are processed correctly</li>
+<li>
+<strong>SQL schema validation</strong> - CSV column names are parsed and user specified types are assigned to columns. In case of column count or name mismatch an error is produced</li>
+<li>
+<strong>Time performance optimizations</strong> - file IO (FS bound) and parsing operations (CPU bound) are performed on multiple threads and use the <strong>producer-consumer</strong> model.</li>
+<li>
+<strong>Non standard comments</strong> - the CSV content may be preceeded by some </li>
+</ol><pre><code>The library does not fully comply to rfc4180 for speed and simplicity.
+We do not support quoted values.
+</code></pre>
+
+<h3>
+<a name="user-content-geting-started" class="anchor" href="#geting-started"><span class="octicon octicon-link"></span></a>Geting Started</h3>
+
+<p>Here is an example of CSV importer usage :</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">testImportWithInvalidDefauls</span>
+<span class="p">{</span>
+    <span class="n">NSString</span><span class="o">*</span> <span class="n">csvPath_</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="n">NSBundle</span> <span class="n">bundleForClass</span><span class="o">:</span> <span class="p">[</span> <span class="n">self</span> <span class="n">class</span> <span class="p">]</span> <span class="p">]</span> <span class="n">pathForResource</span><span class="o">:</span> <span class="s">@"UnixTest3"</span> 
+                                                                                <span class="n">ofType</span><span class="o">:</span> <span class="s">@"csv"</span> <span class="p">];</span>
+
+    <span class="n">NSString</span><span class="o">*</span> <span class="n">fullDatabasePath</span> <span class="o">=</span> <span class="s">@"1.sqlite"</span><span class="p">;</span>
+
+    <span class="n">NSDictionary</span><span class="o">*</span> <span class="n">schema_</span> <span class="o">=</span> <span class="p">@{</span>
+    <span class="s">@"Date"</span>    <span class="o">:</span> <span class="s">@"DATETIME"</span><span class="p">,</span>
+    <span class="s">@"Integer"</span> <span class="o">:</span> <span class="s">@"INTEGER"</span><span class="p">,</span>
+    <span class="s">@"Name"</span>    <span class="o">:</span> <span class="s">@"VARCHAR"</span><span class="p">,</span>
+    <span class="s">@"Id"</span>      <span class="o">:</span> <span class="s">@"VARCHAR"</span><span class="p">,</span>
+    <span class="s">@"TypeId"</span>  <span class="o">:</span> <span class="s">@"INTEGER"</span>
+    <span class="p">};</span>
+
+    <span class="n">NSOrderedSet</span><span class="o">*</span> <span class="n">primaryKey_</span> <span class="o">=</span> <span class="p">[</span> <span class="n">NSOrderedSet</span> <span class="n">orderedSetWithObjects</span><span class="o">:</span> <span class="s">@"Date"</span><span class="p">,</span> <span class="s">@"Id"</span><span class="p">,</span> <span class="s">@"TypeId"</span><span class="p">,</span> <span class="nb">nil</span> <span class="p">];</span>
+
+    <span class="n">CsvDefaultValues</span><span class="o">*</span> <span class="n">defaults_</span> <span class="o">=</span> <span class="p">[</span> <span class="n">CsvDefaultValues</span> <span class="n">new</span> <span class="p">];</span>
+
+    <span class="p">[</span> <span class="n">defaults_</span> <span class="n">addDefaultValue</span><span class="o">:</span> <span class="s">@""</span>
+                      <span class="nl">forColumn:</span> <span class="s">@"Name"</span> <span class="p">];</span>
+    <span class="p">[</span> <span class="n">defaults_</span> <span class="n">addDefaultValue</span><span class="o">:</span> <span class="s">@"10"</span>
+                      <span class="nl">forColumn:</span> <span class="s">@"TypeId"</span> <span class="p">];</span>
+
+    <span class="n">CsvToSqlite</span><span class="o">*</span> <span class="n">converter_</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="n">CsvToSqlite</span> <span class="n">alloc</span> <span class="p">]</span> <span class="n">initWithDatabaseName</span><span class="o">:</span> <span class="n">fullDatabasePath</span>
+                                                              <span class="nl">dataFileName:</span> <span class="n">csvPath_</span> 
+                                                            <span class="n">databaseSchema</span><span class="o">:</span> <span class="n">schema_</span> 
+                                                                <span class="n">primaryKey</span><span class="o">:</span> <span class="n">primaryKey_</span>
+                                                             <span class="nl">defaultValues:</span> <span class="n">defaults_</span>
+                                                             <span class="nl">separatorChar:</span> <span class="sc">';'</span>
+                                                               <span class="nl">commentChar:</span> <span class="sc">'#'</span>
+                                                                <span class="nl">lineReader:</span> <span class="p">[</span> <span class="n">UnixLineReader</span> <span class="n">new</span> <span class="p">]</span>
+                                                            <span class="nl">dbWrapperClass:</span> <span class="p">[</span> <span class="n">FMDatabase</span> <span class="n">class</span> <span class="p">]</span> <span class="p">];</span>
+    <span class="n">converter_</span><span class="p">.</span><span class="n">csvDateFormat</span> <span class="o">=</span> <span class="s">@"yyyyMMdd"</span><span class="p">;</span>
+
+ <span class="n">NSError</span><span class="o">*</span> <span class="n">error_</span><span class="p">;</span>
+ <span class="p">[</span> <span class="n">converter_</span>  <span class="n">storeDataInTable</span><span class="o">:</span> <span class="s">@"Campaigns"</span> 
+                          <span class="n">error</span><span class="o">:</span> <span class="o">&amp;</span><span class="n">error_</span> <span class="p">];</span>
+ <span class="n">XCTAssertNotNil</span><span class="p">(</span> <span class="n">error_</span><span class="p">,</span> <span class="s">@"Unexpected error"</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="user-content-performance-tips-and-tricks" class="anchor" href="#performance-tips-and-tricks"><span class="octicon octicon-link"></span></a>Performance Tips and Tricks</h3>
+
+<p>Columns parsing is the largest bottleneck for this implementation of the CSV importer. For some datasets this step may be skipped.</p>
+
+<p>In order to implement this, the original CSV line</p>
+
+<div class="highlight highlight-sql"><pre><span class="nb">Date</span>      <span class="p">,</span> <span class="n">Id</span><span class="p">,</span> <span class="n">Visits</span>
+<span class="mi">2014</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100500</span>
+</pre></div>
+
+<p>is converted to the query below:</p>
+
+<div class="highlight highlight-sql"><pre><span class="k">INSERT</span> <span class="k">INTO</span> <span class="p">[</span><span class="n">TrafficStats</span><span class="p">]</span>       <span class="o">-</span> <span class="k">SQL</span> <span class="k">Insert</span> <span class="k">statement</span> <span class="n">added</span>
+<span class="p">(</span> <span class="nb">Date</span><span class="p">,</span> <span class="n">Id</span><span class="p">,</span> <span class="n">Visits</span> <span class="p">)</span>             <span class="o">-</span> <span class="n">Brackets</span> <span class="n">added</span>
+<span class="k">VALUES</span>                           <span class="o">-</span> <span class="k">SQL</span> <span class="n">keyword</span> <span class="n">added</span>
+<span class="p">(</span> <span class="s1">'2014-01-01'</span><span class="p">,</span> <span class="s1">'10'</span><span class="p">,</span> <span class="s1">'100500'</span> <span class="p">)</span> <span class="o">-</span> <span class="n">Brackets</span> <span class="k">and</span> <span class="n">quotes</span> <span class="n">added</span>
+</pre></div>
+
+<ol>
+<li>The dataset does not contain any dates.</li>
+<li>The dataset contains dates in ANSI format (<strong>yyyy-MM-dd</strong>) or any other format supported : by SQLite <a href="http://www.sqlite.org/lang_datefunc.html">http://www.sqlite.org/lang_datefunc.html</a>.</li>
+<li>The dataset contains dates in the <code>yyyyMMdd</code> format</li>
+</ol><h3>
+<a name="user-content-benchmarks" class="anchor" href="#benchmarks"><span class="octicon octicon-link"></span></a>Benchmarks</h3>
+
+<p>We have measured the benchmarks for iPad2 which was the oldest and slowest model I could test against. We have measured the entire process of importing including </p>
+
+<ul>
+<li>database scheme creation</li>
+<li>CSV data parsing</li>
+<li>Inserting parsed data to the database</li>
+</ul><p>The numbers in the tables below are an average of 10 launches. Feel free doing any further research using the <a href="https://github.com/dodikk/CsvToSqlite-Profiling">dodikk/CsvToSqlite-Profiling</a> repository.</p>
+
+<h4>
+<a name="user-content-60k-lines-dataset-benchmarks" class="anchor" href="#60k-lines-dataset-benchmarks"><span class="octicon octicon-link"></span></a>60K Lines Dataset Benchmarks</h4>
+
+<table>
+<thead><tr>
+<th>Date Format</th>
+<th>Format Comment</th>
+<th>Time</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>yyyy-MM-dd</td>
+<td>ANSI format</td>
+<td>11 sec</td>
+</tr>
+<tr>
+<td>yyyyMMdd</td>
+<td>"Compact" ANSI</td>
+<td>17 sec</td>
+</tr>
+<tr>
+<td>other</td>
+<td>Using NSDateFormatter</td>
+<td>28 sec</td>
+</tr>
+</tbody>
+</table><h4>
+<a name="user-content-100k-lines-dataset-benchmarks" class="anchor" href="#100k-lines-dataset-benchmarks"><span class="octicon octicon-link"></span></a>100K Lines Dataset Benchmarks</h4>
+
+<table>
+<thead><tr>
+<th>Date Format</th>
+<th>Format Comment</th>
+<th>Time</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>yyyy-MM-dd</td>
+<td>ANSI format</td>
+<td>20 sec</td>
+</tr>
+<tr>
+<td>yyyyMMdd</td>
+<td>"Compact" ANSI</td>
+<td>32 sec</td>
+</tr>
+<tr>
+<td>other</td>
+<td>Using NSDateFormatter</td>
+<td>40 sec</td>
+</tr>
+</tbody>
+</table><h3>
+<a name="user-content-dependencies-" class="anchor" href="#dependencies-"><span class="octicon octicon-link"></span></a>Dependencies :</h3>
+
+<ol>
+<li>dodikk / ObjcScopedGuard <a href="https://github.com/dodikk/ObjcScopedGuard.git">https://github.com/dodikk/ObjcScopedGuard.git</a>
+</li>
+<li>dodikk / ESLocale <a href="https://github.com/dodikk/ESLocale.git">https://github.com/dodikk/ESLocale.git</a>
+</li>
+<li>ccgus / fmdb <a href="https://github.com/ccgus/fmdb.git">https://github.com/ccgus/fmdb.git</a>
+</li>
+<li>dodikk / ESDatabaseWrapper <a href="https://github.com/dodikk/ESDatabaseWrapper.git">https://github.com/dodikk/ESDatabaseWrapper.git</a>
+</li>
+</ol><p>The recommended approach is using sub-projects. However, <strong>cocoapods</strong> users are welcome to enter the <code>pod install CsvToSqlite</code> command</p>
+
+<h3>
+<a name="user-content-todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO:</h3>
+
+<pre><code>Make the library rfc4180 compliant. Start using davedelong / CHCSVParser for better CSV handling
+</code></pre>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://camo.githubusercontent.com/f9c676fe616e0f4cf4d4f3f45acf856479edfaa3/68747470733a2f2f64327765637a68766c38323376302e636c6f756466726f6e742e6e65742f646f64696b6b2f637376746f73716c6974652f7472656e642e706e67" alt="Bitdeli Badge" data-canonical-src="https://d2weczhvl823v0.cloudfront.net/dodikk/csvtosqlite/trend.png" style="max-width:100%;"></a></p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.04069s from github-fe121-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+
