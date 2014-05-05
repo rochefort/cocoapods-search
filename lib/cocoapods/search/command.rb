@@ -17,8 +17,8 @@ module Cocoapods::Search
     desc 'search [NAME]', 'Search cocopapods'
     def search(name = nil)
       return invoke :help unless name
-      cs = Cocoapods::Search::Cli.new(name)
-      cs.search
+      cs = Cocoapods::Search::Cli.new
+      cs.search(name)
     end
 
     private

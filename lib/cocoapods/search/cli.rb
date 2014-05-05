@@ -5,12 +5,12 @@ module Cocoapods::Search
   class Cli
     include Cocoapods::Search::Rendering
 
-    def initialize(keyword)
-      @keyword = keyword
+    def initialize
       @agent = Mechanize.new
     end
 
-    def search
+    def search(keyword)
+      @keyword = keyword
       pods = get_pods
       pods.sort!{ |x,y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
       Cli.render(pods)
