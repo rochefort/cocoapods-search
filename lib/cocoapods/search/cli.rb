@@ -26,11 +26,11 @@ module Cocoapods::Search
         pods = []
         pod_search.each do |result|
           pod = Pod.new
-          first_line = result.lines[0].strip
+          first_line = result.lines.to_a[0].strip
           # if searching result is nothing
           raise LibraryNotFound, first_line if first_line =~ /Unable to find a pod with name matching/
           pod.name = first_line
-          result.lines do |line|
+          result.lines.each do |line|
             if line =~ /- Source:\s+(https?:\/\/.*)\.git/
               github_url = $1
               pod.star_count, pod.fork_count = scrape_social_score(github_url)
