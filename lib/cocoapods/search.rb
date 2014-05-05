@@ -1,4 +1,12 @@
-require 'cocoapods/search/version'
-require 'cocoapods/search/pod'
-require 'cocoapods/search/rendering'
-require 'cocoapods/search/cli'
+require 'rubygems'
+
+module Cocoapods
+  module Search
+  class LibraryNotFound < LoadError; end
+
+    autoload :Cli,       'cocoapods/search/cli'
+    autoload :Pod,       'cocoapods/search/pod'
+    autoload :Rendering, 'cocoapods/search/rendering'
+    autoload :VERSION,   'cocoapods/search/version'
+  end
+end
