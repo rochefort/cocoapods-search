@@ -18,7 +18,7 @@ def stub_request_on_github(url)
 end
 
 # http://d.hatena.ne.jp/POCHI_BLACK/20100324
-# This method is written by wycats
+# this method is written by wycats
 def capture(stream)
   begin
     stream = stream.to_s

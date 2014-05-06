@@ -1,9 +1,11 @@
-language: objective-c
-#language: ruby
+#language: objective-c
+language: ruby
 rvm:
   - 1.9.3
+#before_script:
+#  - export LANG=en_US.UTF-8
 before_install:
  - gem install cocoapods
  - pod setup
-script:
- - bundle exec rake spec
+#script:
+# - bundle exec rake spec
