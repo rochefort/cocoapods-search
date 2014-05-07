@@ -27,8 +27,6 @@ module Cocoapods::Search
         pod_search.each do |result|
           pod = Pod.new
           first_line = result.lines.to_a[0].strip
-          # if searching result is nothing
-          raise LibraryNotFound, first_line if first_line =~ /Unable to find a pod with name matching/
           pod.name = first_line
           result.lines.each do |line|
             if line =~ /- Source:\s+(https?:\/\/.*)\.git/
@@ -44,6 +42,7 @@ module Cocoapods::Search
 
       def pod_search
         result, error, status = Open3.capture3("pod search #{@keyword}")
+        raise LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
         raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
         raise PodError, "#{result} #{error}" unless status.success?
         pods = result.split(/\n{2,3}->/)

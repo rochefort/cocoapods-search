@@ -9,7 +9,7 @@ describe Cocoapods::Search::Cli do
     context 'with nonexistance pods' do
       before do
         Open3.should_receive(:capture3).and_return(
-          [dummy_pod_search_nothing, '', double(success?: true)])
+          [dummy_pod_search_nothing, '', double(success?: false)])
       end
       it 'should raise LibraryNotFound' do
         expect{ @cli.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
