@@ -41,7 +41,7 @@ module Cocoapods::Search
       end
 
       def pod_search
-        result, error, status = Open3.capture3("pod search #{@keyword}")
+        result, error, status = Open3.capture3("pod search --no-ansi #{@keyword}")
         raise LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
         raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
         raise PodError, "#{result} #{error}" unless status.success?
