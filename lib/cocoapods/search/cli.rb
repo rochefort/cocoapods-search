@@ -43,9 +43,9 @@ module Cocoapods::Search
       end
 
       def pod_search
-        # TODO: status is unused variable
-        pod_search_result, status = Open3.capture2("pod search #{@keyword}")
-        pods = pod_search_result.split(/\n{2,3}->/)
+        result, error, status = Open3.capture3("pod search #{@keyword}")
+        raise PodError, "#{result} #{error}" unless status.success?
+        pods = result.split(/\n{2,3}->/)
         pods.delete("")
         pods
       end

@@ -8,10 +8,21 @@ describe Cocoapods::Search::Cli do
 
     context 'with nonexistance pods' do
       before do
-        Open3.should_receive(:capture2).and_return(dummy_pod_search_nothing)
+        Open3.should_receive(:capture3).and_return(
+          [dummy_pod_search_nothing, '', double(success?: true)])
       end
       it 'should raise LibraryNotFound' do
         expect{ @cli.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
+      end
+    end
+
+    context 'occored pods error' do
+      before do
+        Open3.should_receive(:capture3).and_return(
+          ['stdout', 'stderr', double(success?: false)])
+      end
+      it 'should raise PodError' do
+        expect{ @cli.search('when error occured') }.to raise_error(Cocoapods::Search::PodError)
       end
     end
 
@@ -20,7 +31,7 @@ describe Cocoapods::Search::Cli do
         stub_request_on_github 'https://github.com/AaronBratcher/ABSQLite'
         stub_request_on_github 'https://github.com/dodikk/CsvToSqlite'
         stub_request_on_github 'https://github.com/youknowone/sqlite3-objc'
-        Open3.should_receive(:capture2).and_return(dummy_pod_search_result)
+        Open3.should_receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
       end
 
       it 'should display pods ordering by score' do

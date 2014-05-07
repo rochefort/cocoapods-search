@@ -20,6 +20,9 @@ module Cocoapods::Search
     rescue LibraryNotFound => e
       say e.message, :red
       abort
+    rescue PodError => e
+      say e.message
+      abort
     end
 
     private
