@@ -44,6 +44,7 @@ module Cocoapods::Search
 
       def pod_search
         result, error, status = Open3.capture3("pod search #{@keyword}")
+        raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
         raise PodError, "#{result} #{error}" unless status.success?
         pods = result.split(/\n{2,3}->/)
         pods.delete("")

@@ -16,6 +16,16 @@ describe Cocoapods::Search::Cli do
       end
     end
 
+    context 'updating repository' do
+      before do
+        Open3.should_receive(:capture3).and_return(
+          ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
+      end
+      it 'should raise PodError' do
+        expect{ @cli.search('when updating repository') }.to raise_error(Cocoapods::Search::OldRepositoryError)
+      end
+    end
+
     context 'occored pods error' do
       before do
         Open3.should_receive(:capture3).and_return(

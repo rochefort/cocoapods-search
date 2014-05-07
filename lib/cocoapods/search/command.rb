@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'thor'
 
 module Cocoapods::Search
@@ -19,6 +20,11 @@ module Cocoapods::Search
       cs.search(name)
     rescue LibraryNotFound => e
       say e.message, :red
+      abort
+    rescue OldRepositoryError => e
+      # repository 更新時はエラーとする
+      say '[cocoapods-search] Plz update your repository and retry.', :red
+      say e.message
       abort
     rescue PodError => e
       say e.message
