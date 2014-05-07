@@ -1,5 +1,5 @@
 language: objective-c
 script:
  - bundle exec rake spec
- - rvm use ruby-2.0.0
+ - rvm use ruby-2.0.0-p353
  - bundle exec rake spec
