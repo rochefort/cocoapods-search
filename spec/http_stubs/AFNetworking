@@ -1,0 +1,1606 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>AFNetworking/AFNetworking · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="AFNetworking/AFNetworking" name="twitter:title" /><meta content="AFNetworking - A delightful iOS and OS X networking framework" name="twitter:description" /><meta content="https://avatars1.githubusercontent.com/u/1181541?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars1.githubusercontent.com/u/1181541?s=400" property="og:image" /><meta content="AFNetworking/AFNetworking" property="og:title" /><meta content="https://github.com/AFNetworking/AFNetworking" property="og:url" /><meta content="AFNetworking - A delightful iOS and OS X networking framework" property="og:description" />
+
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="3A9D7ECD:2A04:CB76D1C:536BD6A2" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="BoMKPIo3u+2eOQZpm7JoUZtBH5EwdJGDYrWOEKGtmxM/7FpS5lEMTEzbUz9euMDgjqjfzKVe5jjgWWR2a/1gYg==" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-342dc1ceccdbd5139c1adebf91586840a05f4b28.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-f50c09aa92f8858777f3f33225ec6b65051ac3de.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+        <script crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/frameworks-a6f92b4988ace11684156397e69ddb85024b3d5a.js" type="text/javascript"></script>
+        <script async="async" crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/github-b8017bfecf4c638ee51a83cabadf2556752a34a6.js" type="text/javascript"></script>
+        
+        
+      <meta http-equiv="x-pjax-version" content="d306d83164c67bcf7dafe5012f0ee572">
+
+      
+  <meta name="description" content="AFNetworking - A delightful iOS and OS X networking framework" />
+
+  <meta content="1181541" name="octolytics-dimension-user_id" /><meta content="AFNetworking" name="octolytics-dimension-user_login" /><meta content="1828795" name="octolytics-dimension-repository_id" /><meta content="AFNetworking/AFNetworking" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="1828795" name="octolytics-dimension-repository_network_root_id" /><meta content="AFNetworking/AFNetworking" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/AFNetworking/AFNetworking/commits/master.atom" rel="alternate" title="Recent Commits to AFNetworking:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2FAFNetworking%2FAFNetworking">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="AFNetworking/AFNetworking"
+      data-branch="master"
+      data-sha="ee70f11990a0e1a15be05d8687eda1c2c0693130"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="AFNetworking/AFNetworking" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+    <a href="/login?return_to=%2FAFNetworking%2FAFNetworking"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>Star
+  </a>
+
+    <a class="social-count js-social-count" href="/AFNetworking/AFNetworking/stargazers">
+      11,941
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2FAFNetworking%2FAFNetworking"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/AFNetworking/AFNetworking/network" class="social-count">
+        3,260
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/AFNetworking" class="url fn" itemprop="url" rel="author"><span itemprop="title">AFNetworking</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/AFNetworking/AFNetworking" class="js-current-repository js-repo-home-link">AFNetworking</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/AFNetworking/AFNetworking" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /AFNetworking/AFNetworking">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/AFNetworking/AFNetworking/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /AFNetworking/AFNetworking/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>21</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/AFNetworking/AFNetworking/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /AFNetworking/AFNetworking/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>9</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="/AFNetworking/AFNetworking/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-pjax="true" data-selected-links="repo_wiki /AFNetworking/AFNetworking/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/AFNetworking/AFNetworking/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /AFNetworking/AFNetworking/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/AFNetworking/AFNetworking/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /AFNetworking/AFNetworking/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/AFNetworking/AFNetworking/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /AFNetworking/AFNetworking/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/AFNetworking/AFNetworking.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/AFNetworking/AFNetworking.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/AFNetworking/AFNetworking" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/AFNetworking/AFNetworking" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+                <a href="/AFNetworking/AFNetworking/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download AFNetworking/AFNetworking as a zip file"
+                   title="Download AFNetworking/AFNetworking as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>A delightful iOS and OS X networking framework</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="http://afnetworking.com" rel="nofollow">http://afnetworking.com</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/AFNetworking/AFNetworking/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              1,936
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/AFNetworking/AFNetworking/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            6
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/AFNetworking/AFNetworking/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            40
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/AFNetworking/AFNetworking/graphs/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      195
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/AFNetworking/AFNetworking/search?l=objective-c">
+                <span class="color-block language-color" style="background-color:#438eff;"></span>
+                <span class="lang">Objective-C</span>
+                <span class="percent">98.5%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span data-lang="Other" class="color-block language-color"></span>
+                <span class="lang">Other</span>
+                <span class="percent">1.5%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#ccc">
+  <span class="language-color" style="width:98.5%; background-color:#438eff;" itemprop="keywords">Objective-C</span><span class="language-color" style="width:1.5%; background-color:#ccc;" itemprop="keywords">Other</span>
+    </a>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/AFNetworking/AFNetworking/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped tooltipped-s" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.10.x"
+                 data-name="0.10.x"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.10.x">0.10.x</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.x"
+                 data-name="1.x"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.x">1.x</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/assets"
+                 data-name="assets"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="assets">assets</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/experimental-disk-caching"
+                 data-name="experimental-disk-caching"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="experimental-disk-caching">experimental-disk-caching</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/experimental-fix-1850"
+                 data-name="experimental-fix-1850"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="experimental-fix-1850">experimental-fix-1850</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.2.3"
+                 data-name="2.2.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.2.3">2.2.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.2.2"
+                 data-name="2.2.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.2.2">2.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.2.1"
+                 data-name="2.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.2.1">2.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.2.0"
+                 data-name="2.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.2.0">2.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.1.0"
+                 data-name="2.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.1.0">2.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.3"
+                 data-name="2.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.3">2.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.2"
+                 data-name="2.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.2">2.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.1"
+                 data-name="2.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.1">2.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.0-RC3"
+                 data-name="2.0.0-RC3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.0-RC3">2.0.0-RC3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.0-RC2"
+                 data-name="2.0.0-RC2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.0-RC2">2.0.0-RC2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.0-RC1"
+                 data-name="2.0.0-RC1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.0-RC1">2.0.0-RC1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/2.0.0"
+                 data-name="2.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="2.0.0">2.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.3.4"
+                 data-name="1.3.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.3.4">1.3.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.3.3"
+                 data-name="1.3.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.3.3">1.3.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.3.2"
+                 data-name="1.3.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.3.2">1.3.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.3.1"
+                 data-name="1.3.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.3.1">1.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.3.0"
+                 data-name="1.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.3.0">1.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.2.1"
+                 data-name="1.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.2.1">1.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.2.0"
+                 data-name="1.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.2.0">1.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.1.0"
+                 data-name="1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.0">1.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0RC4"
+                 data-name="1.0RC4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0RC4">1.0RC4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0RC3"
+                 data-name="1.0RC3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0RC3">1.0RC3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0RC2"
+                 data-name="1.0RC2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0RC2">1.0RC2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0RC1"
+                 data-name="1.0RC1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0RC1">1.0RC1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0.1"
+                 data-name="1.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.1">1.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/1.0"
+                 data-name="1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0">1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.10.1"
+                 data-name="0.10.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.10.1">0.10.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.10.0"
+                 data-name="0.10.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.10.0">0.10.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.9.2"
+                 data-name="0.9.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.2">0.9.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.9.1"
+                 data-name="0.9.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.1">0.9.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.9.0"
+                 data-name="0.9.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.0">0.9.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.8.0"
+                 data-name="0.8.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.0">0.8.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.7.0"
+                 data-name="0.7.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.7.0">0.7.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.6.1"
+                 data-name="0.6.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.6.1">0.6.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.6.0"
+                 data-name="0.6.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.6.0">0.6.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.5.1"
+                 data-name="0.5.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.5.1">0.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.5.0"
+                 data-name="0.5.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.5.0">0.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.4.0"
+                 data-name="0.4.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.4.0">0.4.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.3.0"
+                 data-name="0.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.3.0">0.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/AFNetworking/AFNetworking/tree/0.2.1"
+                 data-name="0.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.2.1">0.2.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/AFNetworking/AFNetworking" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">AFNetworking</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2FAFNetworking%2FAFNetworking" aria-label="Sign in to make or propose changes" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/AFNetworking/AFNetworking/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+
+
+  
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/AFNetworking/AFNetworking/commit/20f22feb7b08348e206561ff160af6e585c79ba5" class="message" data-pjax="true" title="Merge pull request #2042 from carsonmcdonald/adncertupdate
+
+Update adn leaf cert">Merge pull request</a> <a href="https://github.com/AFNetworking/AFNetworking/pull/2042" class="issue-link" title="Update adn leaf cert">#2042</a> <a href="/AFNetworking/AFNetworking/commit/20f22feb7b08348e206561ff160af6e585c79ba5" class="message" data-pjax="true" title="Merge pull request #2042 from carsonmcdonald/adncertupdate
+
+Update adn leaf cert">from carsonmcdonald/adncertupdate</a>
+        <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>Update adn leaf cert</pre></div>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="20f22feb7b08348e206561ff160af6e585c79ba5" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/AFNetworking/AFNetworking/commit/20f22feb7b08348e206561ff160af6e585c79ba5" class="sha-block" data-pjax>latest commit <span class="sha">20f22feb7b</span></a>
+
+      <div class="authorship">
+        <img alt="Mattt Thompson" class="gravatar js-avatar" data-user="7659" height="20" src="https://avatars1.githubusercontent.com/u/7659?s=140" width="20" />
+        <span class="author-name"><a href="/mattt" data-skip-pjax="true" rel="contributor">mattt</a></span>
+        authored <local-time class="updated" datetime="2014-05-02T08:16:16-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-02 08:16:16 -0700">May 02, 2014</local-time>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="file-wrap">
+    <table class="files" data-pjax>
+
+      
+<tbody class=""
+  data-url="/AFNetworking/AFNetworking/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/tree/master/AFNetworking.xcworkspace" class="js-directory-link" id="94027229f71505279af4c89d323fff6a-383667500a9ebc10a13223225c96713832c323d8" title="AFNetworking.xcworkspace">AFNetworking.xcworkspace</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/0be5c74963796c76c6cb7aff8698727598b71744" class="message" data-pjax="true" title="Adding UIRefreshControl+AFNetworking">Adding UIRefreshControl+AFNetworking</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-02-11T10:05:58-08:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-02-11 10:05:58 -0800">February 11, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/tree/master/AFNetworking" class="js-directory-link" id="a75d452377f3996bdc4b623a5df25820-8cc732db47bb3327c657ec64419935ee53060c1d" title="AFNetworking">AFNetworking</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/ddae2e052ee1f72e6a3668f95949f6429b2ddd13" class="message" data-pjax="true" title="[Issue #2032] Only nil out outputStream property of connection operation if responseData is non-nil, meaning that no custom  was set">[Issue</a> <a href="https://github.com/AFNetworking/AFNetworking/issues/2032" class="issue-link" title="Breaking change in 2.2.2">#2032</a><a href="/AFNetworking/AFNetworking/commit/ddae2e052ee1f72e6a3668f95949f6429b2ddd13" class="message" data-pjax="true" title="[Issue #2032] Only nil out outputStream property of connection operation if responseData is non-nil, meaning that no custom  was set">] Only nil out outputStream property of connection operat…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-25T10:14:20-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-25 10:14:20 -0700">April 25, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/tree/master/Example" class="js-directory-link" id="0a52730597fb4ffa01fc117d9e71e3a9-88eabb94a913a1f93a81f10f4d3672251769b4d6" title="Example">Example</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/214ddff426fe6321a1387420b751552f4e94cc1f" class="message" data-pjax="true" title="Update the App.net API base URL">Update the App.net API base URL</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-11T16:52:05+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-11 16:52:05 +0200">April 11, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/tree/master/Tests" class="js-directory-link" id="90792de52961c34118f976ebe4af3a75-1b44d9c10e54385461c2942115b92ff845b1e3a2" title="Tests">Tests</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/2676a55318d7e3a7b3a4c130e31e39f4baab384d" class="message" data-pjax="true" title="Update adn leaf cert">Update adn leaf cert</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-01T21:50:20-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-01 21:50:20 -0400">May 01, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/tree/master/UIKit%2BAFNetworking" class="js-directory-link" id="1d33bcb6655001ed64fb14081811e76f-9b7fd8a8cc5317376f8048b5eb0c597f5ef46c2e" title="UIKit+AFNetworking">UIKit+AFNetworking</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/4a3772551bd33049ac00a7ce3907cb7c3889ce81" class="message" data-pjax="true" title="[Issue #2003] Only nil out image view request operation if callback matches current request operation">[Issue</a> <a href="https://github.com/AFNetworking/AFNetworking/issues/2003" class="issue-link" title="UIImageView image loading issue in 2.2.2">#2003</a><a href="/AFNetworking/AFNetworking/commit/4a3772551bd33049ac00a7ce3907cb7c3889ce81" class="message" data-pjax="true" title="[Issue #2003] Only nil out image view request operation if callback matches current request operation">] Only nil out image view request operation if callback m…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-16T16:26:43-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-16 16:26:43 -0700">April 16, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-d9b2144d3bd146e29350b141ac1b1708331c6dd4" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/f16894229808a869f23fd884b96584be4fbafb39" class="message" data-pjax="true" title="Adding Tests/Podfile.lock to .gitignore">Adding Tests/Podfile.lock to .gitignore</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-10-11T04:13:32+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-10-11 04:13:32 +0200">October 11, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-b669ab603952446f985683d42990c05e1316b3d6" title=".travis.yml">.travis.yml</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/7fa79dedc57a64804ce57ecc0404da1ae643cb52" class="message" data-pjax="true" title="remove brew update, s/test:ios/test">remove brew update, s/test:ios/test</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-02-11T10:45:17-08:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-02-11 10:45:17 -0800">February 11, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/AFNetworking.podspec" class="js-directory-link" id="1f8ef09d890801d130cd1ee773e1cb2e-5a1c9d635ed1e6975add3c6dcabb60f70eb06884" title="AFNetworking.podspec">AFNetworking.podspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/c66282b09855bbf8f83cb0b49df69349a07134d9" class="message" data-pjax="true" title="Bumping version to 2.2.3">Bumping version to 2.2.3</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-18T15:45:36-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-18 15:45:36 -0700">April 18, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/CHANGES" class="js-directory-link" id="e4eb329834da3d36278b1b7d943b3bc9-4086065c17d3a2870d74b25c3da322a6cd57cc71" title="CHANGES">CHANGES</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/c66282b09855bbf8f83cb0b49df69349a07134d9" class="message" data-pjax="true" title="Bumping version to 2.2.3">Bumping version to 2.2.3</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-18T15:45:36-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-18 15:45:36 -0700">April 18, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/CONTRIBUTING.md" class="js-directory-link" id="6a3371457528722a734f3c51d9238c13-8d7762026f42fec3597adac9518fdb55469c6681" title="CONTRIBUTING.md">CONTRIBUTING.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/73dfe9415f897c9b8d79bed29bffc58f026cc36d" class="message" data-pjax="true" title="Update CONTRIBUTING.md">Update CONTRIBUTING.md</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-02-24T10:32:54-08:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-02-24 10:32:54 -0800">February 24, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-0616192d0036375876e2bcafc151d40c49786b55" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/5266874bcc79c1afa627e590f982e50f6886f25f" class="message" data-pjax="true" title="Bumping version to 1.3.4">Bumping version to 1.3.4</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-15T13:50:51-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-15 13:50:51 -0700">April 15, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-674cf20917e1cc48ecab6ff4e32ab95a3cfa094c" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/c4d6d9a4f2bf8e9b91b6eeb36621a91a8e040fd6" class="message" data-pjax="true" title="Update README.md">Update README.md</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-21T18:18:37-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-21 18:18:37 -0700">April 21, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-09aac378eeec34f2ccb0cf70620fa838433b5154" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/AFNetworking/AFNetworking/commit/674de9962d6d160ec69e7e24ba6013e3949b1de8" class="message" data-pjax="true" title="Clean before build">Clean before build</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-02-11T16:12:56-08:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-02-11 16:12:56 -0800">February 11, 2014</local-time></span></td>
+    </tr>
+</tbody>
+
+    </table>
+  </div>
+
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><p align="center">
+  <a href="https://raw.github.com/AFNetworking/AFNetworking/assets/afnetworking-logo.png" target="_blank"><img src="https://raw.github.com/AFNetworking/AFNetworking/assets/afnetworking-logo.png" alt="AFNetworking" title="AFNetworking" style="max-width:100%;"></a></p>
+
+<p><a href="https://travis-ci.org/AFNetworking/AFNetworking"><img src="https://camo.githubusercontent.com/8899865b0bce40080ab90f15316efad88689d893/68747470733a2f2f7472617669732d63692e6f72672f41464e6574776f726b696e672f41464e6574776f726b696e672e737667" alt="Build Status" data-canonical-src="https://travis-ci.org/AFNetworking/AFNetworking.svg" style="max-width:100%;"></a></p>
+
+<p>AFNetworking is a delightful networking library for iOS and Mac OS X. It's built on top of the <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html">Foundation URL Loading System</a>, extending the powerful high-level networking abstractions built into Cocoa. It has a modular architecture with well-designed, feature-rich APIs that are a joy to use.</p>
+
+<p>Perhaps the most important feature of all, however, is the amazing community of developers who use and contribute to AFNetworking every day. AFNetworking powers some of the most popular and critically-acclaimed apps on the iPhone, iPad, and Mac.</p>
+
+<p>Choose AFNetworking for your next project, or migrate over your existing projects—you'll be happy you did!</p>
+
+<h2>
+<a name="user-content-how-to-get-started" class="anchor" href="#how-to-get-started"><span class="octicon octicon-link"></span></a>How To Get Started</h2>
+
+<ul>
+<li>
+<a href="https://github.com/AFNetworking/AFNetworking/archive/master.zip">Download AFNetworking</a> and try out the included Mac and iPhone example apps</li>
+<li>Read the <a href="https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking">"Getting Started" guide</a>, <a href="https://github.com/AFNetworking/AFNetworking/wiki/AFNetworking-FAQ">FAQ</a>, or <a href="https://github.com/AFNetworking/AFNetworking/wiki">other articles on the Wiki</a>
+</li>
+<li>Check out the <a href="http://cocoadocs.org/docsets/AFNetworking/2.0.0/">documentation</a> for a comprehensive look at all of the APIs available in AFNetworking</li>
+</ul><h2>
+<a name="user-content-communication" class="anchor" href="#communication"><span class="octicon octicon-link"></span></a>Communication</h2>
+
+<ul>
+<li>If you <strong>need help</strong>, use <a href="http://stackoverflow.com/questions/tagged/afnetworking">Stack Overflow</a>. (Tag 'afnetworking')</li>
+<li>If you'd like to <strong>ask a general question</strong>, use <a href="http://stackoverflow.com/questions/tagged/afnetworking">Stack Overflow</a>.</li>
+<li>If you <strong>found a bug</strong>, open an issue.</li>
+<li>If you <strong>have a feature request</strong>, open an issue.</li>
+<li>If you <strong>want to contribute</strong>, submit a pull request.</li>
+</ul><h3>
+<a name="user-content-installation-with-cocoapods" class="anchor" href="#installation-with-cocoapods"><span class="octicon octicon-link"></span></a>Installation with CocoaPods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the <a href="https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking">"Getting Started" guide for more information</a>.</p>
+
+<h4>
+<a name="user-content-podfile" class="anchor" href="#podfile"><span class="octicon octicon-link"></span></a>Podfile</h4>
+
+<div class="highlight highlight-ruby"><pre><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'7.0'</span>
+<span class="n">pod</span> <span class="s2">"AFNetworking"</span><span class="p">,</span> <span class="s2">"~&gt; 2.0"</span>
+</pre></div>
+
+<h2>
+<a name="user-content-20" class="anchor" href="#20"><span class="octicon octicon-link"></span></a>2.0</h2>
+
+<p>AFNetworking 2.0 is a major update to the framework. Building on 2 years of development, this new version introduces powerful new features, while providing an easy upgrade path for existing users.</p>
+
+<p><strong>Read the <a href="https://github.com/AFNetworking/AFNetworking/wiki/AFNetworking-2.0-Migration-Guide">AFNetworking 2.0 Migration Guide</a> for an overview of the architectural and API changes.</strong></p>
+
+<h3>
+<a name="user-content-whats-new" class="anchor" href="#whats-new"><span class="octicon octicon-link"></span></a>What's New</h3>
+
+<ul>
+<li>Refactored Architecture</li>
+<li>Support for NSURLSession</li>
+<li>Serialization Modules</li>
+<li>Expanded UIKit Extensions</li>
+</ul><h2>
+<a name="user-content-requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>AFNetworking 2.0 and higher requires Xcode 5, targeting either iOS 6.0 and above, or Mac OS 10.8 Mountain Lion (<a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtVersionsPlatforms.html">64-bit with modern Cocoa runtime</a>) and above.</p>
+
+<p>For compatibility with iOS 5 or Mac OS X 10.7, use the <a href="https://github.com/AFNetworking/AFNetworking/tree/1.x">latest 1.x release</a>.</p>
+
+<p>For compatibility with iOS 4.3 or Mac OS X 10.6, use the <a href="https://github.com/AFNetworking/AFNetworking/tree/0.10.x">latest 0.10.x release</a>.</p>
+
+<h2>
+<a name="user-content-architecture" class="anchor" href="#architecture"><span class="octicon octicon-link"></span></a>Architecture</h2>
+
+<h3>
+<a name="user-content-nsurlconnection" class="anchor" href="#nsurlconnection"><span class="octicon octicon-link"></span></a>NSURLConnection</h3>
+
+<ul>
+<li><code>AFURLConnectionOperation</code></li>
+<li><code>AFHTTPRequestOperation</code></li>
+<li><code>AFHTTPRequestOperationManager</code></li>
+</ul><h3>
+<a name="user-content-nsurlsession-ios-7--mac-os-x-109" class="anchor" href="#nsurlsession-ios-7--mac-os-x-109"><span class="octicon octicon-link"></span></a>NSURLSession <em>(iOS 7 / Mac OS X 10.9)</em>
+</h3>
+
+<ul>
+<li><code>AFURLSessionManager</code></li>
+<li><code>AFHTTPSessionManager</code></li>
+</ul><h3>
+<a name="user-content-serialization" class="anchor" href="#serialization"><span class="octicon octicon-link"></span></a>Serialization</h3>
+
+<ul>
+<li>
+<code>&lt;AFURLRequestSerialization&gt;</code>
+
+<ul>
+<li><code>AFHTTPRequestSerializer</code></li>
+<li><code>AFJSONRequestSerializer</code></li>
+<li><code>AFPropertyListRequestSerializer</code></li>
+</ul>
+</li>
+<li>
+<code>&lt;AFURLResponseSerialization&gt;</code>
+
+<ul>
+<li><code>AFHTTPResponseSerializer</code></li>
+<li><code>AFJSONResponseSerializer</code></li>
+<li><code>AFXMLParserResponseSerializer</code></li>
+<li>
+<code>AFXMLDocumentResponseSerializer</code> <em>(Mac OS X)</em>
+</li>
+<li><code>AFPropertyListResponseSerializer</code></li>
+<li><code>AFImageResponseSerializer</code></li>
+<li><code>AFCompoundResponseSerializer</code></li>
+</ul>
+</li>
+</ul><h3>
+<a name="user-content-additional-functionality" class="anchor" href="#additional-functionality"><span class="octicon octicon-link"></span></a>Additional Functionality</h3>
+
+<ul>
+<li><code>AFSecurityPolicy</code></li>
+<li><code>AFNetworkReachabilityManager</code></li>
+</ul><h2>
+<a name="user-content-usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="user-content-http-request-operation-manager" class="anchor" href="#http-request-operation-manager"><span class="octicon octicon-link"></span></a>HTTP Request Operation Manager</h3>
+
+<p><code>AFHTTPRequestOperationManager</code> encapsulates the common patterns of communicating with a web application over HTTP, including request creation, response serialization, network reachability monitoring, and security, as well as request operation management.</p>
+
+<h4>
+<a name="user-content-get-request" class="anchor" href="#get-request"><span class="octicon octicon-link"></span></a><code>GET</code> Request</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">AFHTTPRequestOperationManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFHTTPRequestOperationManager</span> <span class="n">manager</span><span class="p">];</span>
+<span class="p">[</span><span class="n">manager</span> <span class="n">GET</span><span class="o">:</span><span class="s">@"http://example.com/resources.json"</span> <span class="n">parameters</span><span class="o">:</span><span class="nb">nil</span> <span class="n">success</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"JSON: %@"</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">}];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-post-url-form-encoded-request" class="anchor" href="#post-url-form-encoded-request"><span class="octicon octicon-link"></span></a><code>POST</code> URL-Form-Encoded Request</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">AFHTTPRequestOperationManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFHTTPRequestOperationManager</span> <span class="n">manager</span><span class="p">];</span>
+<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">@{</span><span class="s">@"foo"</span><span class="o">:</span> <span class="s">@"bar"</span><span class="p">};</span>
+<span class="p">[</span><span class="n">manager</span> <span class="n">POST</span><span class="o">:</span><span class="s">@"http://example.com/resources.json"</span> <span class="n">parameters</span><span class="o">:</span><span class="n">parameters</span> <span class="n">success</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"JSON: %@"</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">}];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-post-multi-part-request" class="anchor" href="#post-multi-part-request"><span class="octicon octicon-link"></span></a><code>POST</code> Multi-Part Request</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">AFHTTPRequestOperationManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFHTTPRequestOperationManager</span> <span class="n">manager</span><span class="p">];</span>
+<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">@{</span><span class="s">@"foo"</span><span class="o">:</span> <span class="s">@"bar"</span><span class="p">};</span>
+<span class="n">NSURL</span> <span class="o">*</span><span class="n">filePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">fileURLWithPath</span><span class="o">:</span><span class="s">@"file://path/to/image.png"</span><span class="p">];</span>
+<span class="p">[</span><span class="n">manager</span> <span class="n">POST</span><span class="o">:</span><span class="s">@"http://example.com/resources.json"</span> <span class="n">parameters</span><span class="o">:</span><span class="n">parameters</span> <span class="n">constructingBodyWithBlock</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">AFMultipartFormData</span><span class="o">&gt;</span> <span class="n">formData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">formData</span> <span class="n">appendPartWithFileURL</span><span class="o">:</span><span class="n">filePath</span> <span class="n">name</span><span class="o">:</span><span class="s">@"image"</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">success</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Success: %@"</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">}];</span>
+</pre></div>
+
+<hr><h3>
+<a name="user-content-afurlsessionmanager" class="anchor" href="#afurlsessionmanager"><span class="octicon octicon-link"></span></a>AFURLSessionManager</h3>
+
+<p><code>AFURLSessionManager</code> creates and manages an <code>NSURLSession</code> object based on a specified <code>NSURLSessionConfiguration</code> object, which conforms to <code>&lt;NSURLSessionTaskDelegate&gt;</code>, <code>&lt;NSURLSessionDataDelegate&gt;</code>, <code>&lt;NSURLSessionDownloadDelegate&gt;</code>, and <code>&lt;NSURLSessionDelegate&gt;</code>.</p>
+
+<h4>
+<a name="user-content-creating-a-download-task" class="anchor" href="#creating-a-download-task"><span class="octicon octicon-link"></span></a>Creating a Download Task</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">configuration</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSessionConfiguration</span> <span class="n">defaultSessionConfiguration</span><span class="p">];</span>
+<span class="n">AFURLSessionManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFURLSessionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithSessionConfiguration</span><span class="o">:</span><span class="n">configuration</span><span class="p">];</span>
+
+<span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://example.com/download.zip"</span><span class="p">];</span>
+<span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLRequest</span> <span class="n">requestWithURL</span><span class="o">:</span><span class="n">URL</span><span class="p">];</span>
+
+<span class="n">NSURLSessionDownloadTask</span> <span class="o">*</span><span class="n">downloadTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">manager</span> <span class="n">downloadTaskWithRequest</span><span class="o">:</span><span class="n">request</span> <span class="n">progress</span><span class="o">:</span><span class="nb">nil</span> <span class="n">destination</span><span class="o">:^</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="n">targetPath</span><span class="p">,</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSURL</span> <span class="o">*</span><span class="n">documentsDirectoryURL</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSFileManager</span> <span class="n">defaultManager</span><span class="p">]</span> <span class="n">URLForDirectory</span><span class="o">:</span><span class="n">NSDocumentDirectory</span> <span class="n">inDomain</span><span class="o">:</span><span class="n">NSUserDomainMask</span> <span class="n">appropriateForURL</span><span class="o">:</span><span class="nb">nil</span> <span class="n">create</span><span class="o">:</span><span class="nb">NO</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">documentsDirectoryURL</span> <span class="n">URLByAppendingPathComponent</span><span class="o">:</span><span class="p">[</span><span class="n">response</span> <span class="n">suggestedFilename</span><span class="p">]];</span>
+<span class="p">}</span> <span class="n">completionHandler</span><span class="o">:^</span><span class="p">(</span><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">filePath</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"File downloaded to: %@"</span><span class="p">,</span> <span class="n">filePath</span><span class="p">);</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">downloadTask</span> <span class="n">resume</span><span class="p">];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-creating-an-upload-task" class="anchor" href="#creating-an-upload-task"><span class="octicon octicon-link"></span></a>Creating an Upload Task</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">configuration</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSessionConfiguration</span> <span class="n">defaultSessionConfiguration</span><span class="p">];</span>
+<span class="n">AFURLSessionManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFURLSessionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithSessionConfiguration</span><span class="o">:</span><span class="n">configuration</span><span class="p">];</span>
+
+<span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://example.com/upload"</span><span class="p">];</span>
+<span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLRequest</span> <span class="n">requestWithURL</span><span class="o">:</span><span class="n">URL</span><span class="p">];</span>
+
+<span class="n">NSURL</span> <span class="o">*</span><span class="n">filePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">fileURLWithPath</span><span class="o">:</span><span class="s">@"file://path/to/image.png"</span><span class="p">];</span>
+<span class="n">NSURLSessionUploadTask</span> <span class="o">*</span><span class="n">uploadTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">manager</span> <span class="n">uploadTaskWithRequest</span><span class="o">:</span><span class="n">request</span> <span class="n">fromFile</span><span class="o">:</span><span class="n">filePath</span> <span class="n">progress</span><span class="o">:</span><span class="nb">nil</span> <span class="n">completionHandler</span><span class="o">:^</span><span class="p">(</span><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Success: %@ %@"</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">uploadTask</span> <span class="n">resume</span><span class="p">];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-creating-an-upload-task-for-a-multi-part-request-with-progress" class="anchor" href="#creating-an-upload-task-for-a-multi-part-request-with-progress"><span class="octicon octicon-link"></span></a>Creating an Upload Task for a Multi-Part Request, with Progress</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSMutableURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFHTTPRequestSerializer</span> <span class="n">serializer</span><span class="p">]</span> <span class="n">multipartFormRequestWithMethod</span><span class="o">:</span><span class="s">@"POST"</span> <span class="n">URLString</span><span class="o">:</span><span class="s">@"http://example.com/upload"</span> <span class="n">parameters</span><span class="o">:</span><span class="nb">nil</span> <span class="n">constructingBodyWithBlock</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">AFMultipartFormData</span><span class="o">&gt;</span> <span class="n">formData</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">formData</span> <span class="n">appendPartWithFileURL</span><span class="o">:</span><span class="p">[</span><span class="n">NSURL</span> <span class="n">fileURLWithPath</span><span class="o">:</span><span class="s">@"file://path/to/image.jpg"</span><span class="p">]</span> <span class="n">name</span><span class="o">:</span><span class="s">@"file"</span> <span class="n">fileName</span><span class="o">:</span><span class="s">@"filename.jpg"</span> <span class="n">mimeType</span><span class="o">:</span><span class="s">@"image/jpeg"</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="p">}</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+
+<span class="n">AFURLSessionManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFURLSessionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithSessionConfiguration</span><span class="o">:</span><span class="p">[</span><span class="n">NSURLSessionConfiguration</span> <span class="n">defaultSessionConfiguration</span><span class="p">]];</span>
+<span class="n">NSProgress</span> <span class="o">*</span><span class="n">progress</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+
+<span class="n">NSURLSessionUploadTask</span> <span class="o">*</span><span class="n">uploadTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">manager</span> <span class="n">uploadTaskWithStreamedRequest</span><span class="o">:</span><span class="n">request</span> <span class="n">progress</span><span class="o">:&amp;</span><span class="n">progress</span> <span class="n">completionHandler</span><span class="o">:^</span><span class="p">(</span><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@ %@"</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+
+<span class="p">[</span><span class="n">uploadTask</span> <span class="n">resume</span><span class="p">];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-creating-a-data-task" class="anchor" href="#creating-a-data-task"><span class="octicon octicon-link"></span></a>Creating a Data Task</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSURLSessionConfiguration</span> <span class="o">*</span><span class="n">configuration</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSessionConfiguration</span> <span class="n">defaultSessionConfiguration</span><span class="p">];</span>
+<span class="n">AFURLSessionManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFURLSessionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithSessionConfiguration</span><span class="o">:</span><span class="n">configuration</span><span class="p">];</span>
+
+<span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://example.com/upload"</span><span class="p">];</span>
+<span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLRequest</span> <span class="n">requestWithURL</span><span class="o">:</span><span class="n">URL</span><span class="p">];</span>
+
+<span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="n">dataTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">manager</span> <span class="n">dataTaskWithRequest</span><span class="o">:</span><span class="n">request</span> <span class="n">completionHandler</span><span class="o">:^</span><span class="p">(</span><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@ %@"</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">dataTask</span> <span class="n">resume</span><span class="p">];</span>
+</pre></div>
+
+<hr><h3>
+<a name="user-content-request-serialization" class="anchor" href="#request-serialization"><span class="octicon octicon-link"></span></a>Request Serialization</h3>
+
+<p>Request serializers create requests from URL strings, encoding parameters as either a query string or HTTP body.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSString</span> <span class="o">*</span><span class="n">URLString</span> <span class="o">=</span> <span class="s">@"http://example.com"</span><span class="p">;</span>
+<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">@{</span><span class="s">@"foo"</span><span class="o">:</span> <span class="s">@"bar"</span><span class="p">,</span> <span class="s">@"baz"</span><span class="o">:</span> <span class="p">@[</span><span class="mi">@1</span><span class="p">,</span> <span class="mi">@2</span><span class="p">,</span> <span class="mi">@3</span><span class="p">]};</span>
+</pre></div>
+
+<h4>
+<a name="user-content-query-string-parameter-encoding" class="anchor" href="#query-string-parameter-encoding"><span class="octicon octicon-link"></span></a>Query String Parameter Encoding</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="p">[[</span><span class="n">AFHTTPRequestSerializer</span> <span class="n">serializer</span><span class="p">]</span> <span class="n">requestWithMethod</span><span class="o">:</span><span class="s">@"GET"</span> <span class="n">URLString</span><span class="o">:</span><span class="n">URLString</span> <span class="n">parameters</span><span class="o">:</span><span class="n">parameters</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+
+<pre><code>GET http://example.com?foo=bar&amp;baz[]=1&amp;baz[]=2&amp;baz[]=3
+</code></pre>
+
+<h4>
+<a name="user-content-url-form-parameter-encoding" class="anchor" href="#url-form-parameter-encoding"><span class="octicon octicon-link"></span></a>URL Form Parameter Encoding</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="p">[[</span><span class="n">AFHTTPRequestSerializer</span> <span class="n">serializer</span><span class="p">]</span> <span class="n">requestWithMethod</span><span class="o">:</span><span class="s">@"POST"</span> <span class="n">URLString</span><span class="o">:</span><span class="n">URLString</span> <span class="n">parameters</span><span class="o">:</span><span class="n">parameters</span><span class="p">];</span>
+</pre></div>
+
+<pre><code>POST http://example.com/
+Content-Type: application/x-www-form-urlencoded
+
+foo=bar&amp;baz[]=1&amp;baz[]=2&amp;baz[]=3
+</code></pre>
+
+<h4>
+<a name="user-content-json-parameter-encoding" class="anchor" href="#json-parameter-encoding"><span class="octicon octicon-link"></span></a>JSON Parameter Encoding</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="p">[[</span><span class="n">AFJSONRequestSerializer</span> <span class="n">serializer</span><span class="p">]</span> <span class="n">requestWithMethod</span><span class="o">:</span><span class="s">@"POST"</span> <span class="n">URLString</span><span class="o">:</span><span class="n">URLString</span> <span class="n">parameters</span><span class="o">:</span><span class="n">parameters</span><span class="p">];</span>
+</pre></div>
+
+<pre><code>POST http://example.com/
+Content-Type: application/json
+
+{"foo": "bar", "baz": [1,2,3]}
+</code></pre>
+
+<hr><h3>
+<a name="user-content-network-reachability-manager" class="anchor" href="#network-reachability-manager"><span class="octicon octicon-link"></span></a>Network Reachability Manager</h3>
+
+<p><code>AFNetworkReachabilityManager</code> monitors the reachability of domains, and addresses for both WWAN and WiFi network interfaces.</p>
+
+<h4>
+<a name="user-content-shared-network-reachability" class="anchor" href="#shared-network-reachability"><span class="octicon octicon-link"></span></a>Shared Network Reachability</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="p">[[</span><span class="n">AFNetworkReachabilityManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="n">setReachabilityStatusChangeBlock</span><span class="o">:^</span><span class="p">(</span><span class="n">AFNetworkReachabilityStatus</span> <span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Reachability: %@"</span><span class="p">,</span> <span class="n">AFStringFromNetworkReachabilityStatus</span><span class="p">(</span><span class="n">status</span><span class="p">));</span>
+<span class="p">}];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-http-manager-with-base-url" class="anchor" href="#http-manager-with-base-url"><span class="octicon octicon-link"></span></a>HTTP Manager with Base URL</h4>
+
+<p>When a <code>baseURL</code> is provided, network reachability is scoped to the host of that base URL.</p>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSURL</span> <span class="o">*</span><span class="n">baseURL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://example.com/"</span><span class="p">];</span>
+<span class="n">AFHTTPRequestOperationManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFHTTPRequestOperationManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithBaseURL</span><span class="o">:</span><span class="n">baseURL</span><span class="p">];</span>
+
+<span class="n">NSOperationQueue</span> <span class="o">*</span><span class="n">operationQueue</span> <span class="o">=</span> <span class="n">manager</span><span class="p">.</span><span class="n">operationQueue</span><span class="p">;</span>
+<span class="p">[</span><span class="n">manager</span><span class="p">.</span><span class="n">reachabilityManager</span> <span class="n">setReachabilityStatusChangeBlock</span><span class="o">:^</span><span class="p">(</span><span class="n">AFNetworkReachabilityStatus</span> <span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">AFNetworkReachabilityStatusReachableViaWWAN</span>:
+        <span class="k">case</span> <span class="n">AFNetworkReachabilityStatusReachableViaWiFi</span>:
+            <span class="p">[</span><span class="n">operationQueue</span> <span class="n">setSuspended</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">AFNetworkReachabilityStatusNotReachable</span>:
+        <span class="nl">default:</span>
+            <span class="p">[</span><span class="n">operationQueue</span> <span class="n">setSuspended</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+</pre></div>
+
+<hr><h3>
+<a name="user-content-security-policy" class="anchor" href="#security-policy"><span class="octicon octicon-link"></span></a>Security Policy</h3>
+
+<p><code>AFSecurityPolicy</code> evaluates server trust against pinned X.509 certificates and public keys over secure connections.</p>
+
+<p>Adding pinned SSL certificates to your app helps prevent man-in-the-middle attacks and other vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged to route all communication over an HTTPS connection with SSL pinning configured and enabled.</p>
+
+<h4>
+<a name="user-content-allowing-invalid-ssl-certificates" class="anchor" href="#allowing-invalid-ssl-certificates"><span class="octicon octicon-link"></span></a>Allowing Invalid SSL Certificates</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">AFHTTPRequestOperationManager</span> <span class="o">*</span><span class="n">manager</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFHTTPRequestOperationManager</span> <span class="n">manager</span><span class="p">];</span>
+<span class="n">manager</span><span class="p">.</span><span class="n">securityPolicy</span><span class="p">.</span><span class="n">allowInvalidCertificates</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span> <span class="c1">// not recommended for production</span>
+</pre></div>
+
+<hr><h3>
+<a name="user-content-afhttprequestoperation" class="anchor" href="#afhttprequestoperation"><span class="octicon octicon-link"></span></a>AFHTTPRequestOperation</h3>
+
+<p><code>AFHTTPRequestOperation</code> is a subclass of <code>AFURLConnectionOperation</code> for requests using the HTTP or HTTPS protocols. It encapsulates the concept of acceptable status codes and content types, which determine the success or failure of a request.</p>
+
+<p>Although <code>AFHTTPRequestOperationManager</code> is usually the best way to go about making requests, <code>AFHTTPRequestOperation</code> can be used by itself.</p>
+
+<h4>
+<a name="user-content-get-with-afhttprequestoperation" class="anchor" href="#get-with-afhttprequestoperation"><span class="octicon octicon-link"></span></a><code>GET</code> with <code>AFHTTPRequestOperation</code>
+</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://example.com/resources/123.json"</span><span class="p">];</span>
+<span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLRequest</span> <span class="n">requestWithURL</span><span class="o">:</span><span class="n">URL</span><span class="p">];</span>
+<span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">op</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFHTTPRequestOperation</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithRequest</span><span class="o">:</span><span class="n">request</span><span class="p">];</span>
+<span class="n">op</span><span class="p">.</span><span class="n">responseSerializer</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFJSONResponseSerializer</span> <span class="n">serializer</span><span class="p">];</span>
+<span class="p">[</span><span class="n">op</span> <span class="n">setCompletionBlockWithSuccess</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="kt">id</span> <span class="n">responseObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"JSON: %@"</span><span class="p">,</span> <span class="n">responseObject</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">}];</span>
+<span class="p">[[</span><span class="n">NSOperationQueue</span> <span class="n">mainQueue</span><span class="p">]</span> <span class="n">addOperation</span><span class="o">:</span><span class="n">op</span><span class="p">];</span>
+</pre></div>
+
+<h4>
+<a name="user-content-batch-of-operations" class="anchor" href="#batch-of-operations"><span class="octicon octicon-link"></span></a>Batch of Operations</h4>
+
+<div class="highlight highlight-objective-c"><pre><span class="n">NSMutableArray</span> <span class="o">*</span><span class="n">mutableOperations</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableArray</span> <span class="n">array</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="n">fileURL</span> <span class="k">in</span> <span class="n">filesToUpload</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFHTTPRequestSerializer</span> <span class="n">serializer</span><span class="p">]</span> <span class="n">multipartFormRequestWithMethod</span><span class="o">:</span><span class="s">@"POST"</span> <span class="n">URLString</span><span class="o">:</span><span class="s">@"http://example.com/upload"</span> <span class="n">parameters</span><span class="o">:</span><span class="nb">nil</span> <span class="n">constructingBodyWithBlock</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span><span class="o">&lt;</span><span class="n">AFMultipartFormData</span><span class="o">&gt;</span> <span class="n">formData</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">formData</span> <span class="n">appendPartWithFileURL</span><span class="o">:</span><span class="n">fileURL</span> <span class="n">name</span><span class="o">:</span><span class="s">@"images[]"</span> <span class="n">error</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="p">}];</span>
+
+    <span class="n">AFHTTPRequestOperation</span> <span class="o">*</span><span class="n">operation</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AFHTTPRequestOperation</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithRequest</span><span class="o">:</span><span class="n">request</span><span class="p">];</span>
+
+    <span class="p">[</span><span class="n">mutableOperations</span> <span class="n">addObject</span><span class="o">:</span><span class="n">operation</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="n">NSArray</span> <span class="o">*</span><span class="n">operations</span> <span class="o">=</span> <span class="p">[</span><span class="n">AFURLConnectionOperation</span> <span class="n">batchOfRequestOperations</span><span class="o">:</span><span class="p">@[...]</span> <span class="n">progressBlock</span><span class="o">:^</span><span class="p">(</span><span class="n">NSUInteger</span> <span class="n">numberOfFinishedOperations</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">totalNumberOfOperations</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%lu of %lu complete"</span><span class="p">,</span> <span class="n">numberOfFinishedOperations</span><span class="p">,</span> <span class="n">totalNumberOfOperations</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">completionBlock</span><span class="o">:^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">operations</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"All operations in batch complete"</span><span class="p">);</span>
+<span class="p">}];</span>
+<span class="p">[[</span><span class="n">NSOperationQueue</span> <span class="n">mainQueue</span><span class="p">]</span> <span class="n">addOperations</span><span class="o">:</span><span class="n">operations</span> <span class="n">waitUntilFinished</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+</pre></div>
+
+<h2>
+<a name="user-content-unit-tests" class="anchor" href="#unit-tests"><span class="octicon octicon-link"></span></a>Unit Tests</h2>
+
+<p>AFNetworking includes a suite of unit tests within the Tests subdirectory. In order to run the unit tests, you must install the testing dependencies via <a href="http://cocoapods.org/">CocoaPods</a>:</p>
+
+<pre><code>$ cd Tests
+$ pod install
+</code></pre>
+
+<p>Once testing dependencies are installed, you can execute the test suite via the 'iOS Tests' and 'OS X Tests' schemes within Xcode.</p>
+
+<h3>
+<a name="user-content-running-tests-from-the-command-line" class="anchor" href="#running-tests-from-the-command-line"><span class="octicon octicon-link"></span></a>Running Tests from the Command Line</h3>
+
+<p>Tests can also be run from the command line or within a continuous integration environment. The <a href="https://github.com/mneorr/xcpretty"><code>xcpretty</code></a> utility needs to be installed before running the tests from the command line:</p>
+
+<pre><code>$ gem install xcpretty
+</code></pre>
+
+<p>Once <code>xcpretty</code> is installed, you can execute the suite via <code>rake test</code>.</p>
+
+<h2>
+<a name="user-content-credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>AFNetworking was originally created by <a href="https://github.com/sco/">Scott Raymond</a> and <a href="https://github.com/mattt/">Mattt Thompson</a> in the development of <a href="http://en.wikipedia.org/wiki/Gowalla">Gowalla for iPhone</a>.</p>
+
+<p>AFNetworking's logo was designed by <a href="http://www.alandefibaugh.com/">Alan Defibaugh</a>.</p>
+
+<p>And most of all, thanks to AFNetworking's <a href="https://github.com/AFNetworking/AFNetworking/contributors">growing list of contributors</a>.</p>
+
+<h2>
+<a name="user-content-contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>Follow AFNetworking on Twitter (<a href="https://twitter.com/AFNetworking">@AFNetworking</a>)</p>
+
+<h3>
+<a name="user-content-maintainers" class="anchor" href="#maintainers"><span class="octicon octicon-link"></span></a>Maintainers</h3>
+
+<ul>
+<li>
+<a href="http://github.com/mattt">Mattt Thompson</a> (<a href="https://twitter.com/mattt">@mattt</a>)</li>
+</ul><h2>
+<a name="user-content-license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>AFNetworking is available under the MIT license. See the LICENSE file for more info.</p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.08584s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

@@ -55,6 +55,24 @@ describe Cocoapods::Search::Cli do
         EOS
       end
     end
+
+    context 'format with long name pod' do
+      before do
+        stub_request_on_github 'https://github.com/acerbetti/ACECoreDataManager'
+        stub_request_on_github 'https://github.com/AFNetworking/AFNetworking'
+        stub_request_on_github 'https://github.com/arlophoenix/AKANetworkLogging'
+        Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
+      end
+      it 'should display with expanding name column' do
+        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+          |Name(Ver)                                      Score  Star  Fork
+          |--------------------------------------------- ------ ----- -----
+          |AFNetworking (2.2.3)                           28241 11941  3260
+          |ACECoreDataNetworkTableViewController (0.0.2)      2     2     0
+          |AKANetworkLogging (0.1.0)                          1     1     0
+        EOS
+      end
+    end
   end
 
   private
@@ -107,6 +125,43 @@ describe Cocoapods::Search::Cli do
         |   - Homepage: https://github.com/youknowone/sqlite3-objc
         |   - Source:   https://github.com/youknowone/sqlite3-objc.git
         |   - Versions: 0.2 [master repo]
+      EOS
+    end
+
+    def dummy_pod_search_result_with_long_name
+      <<-'EOS'.gsub(/^\s+\|/, '')
+        |
+        |
+        |-> AFNetworking (2.2.3)
+        |   A delightful iOS and OS X networking framework.
+        |   pod 'AFNetworking', '~> 2.2.3'
+        |   - Homepage: https://github.com/AFNetworking/AFNetworking
+        |   - Source:   https://github.com/AFNetworking/AFNetworking.git
+        |   - Versions: 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.0, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 2.0.0-RC3, 2.0.0-RC2, 2.0.0-RC1, 1.3.4, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.2.1, 1.2.0,
+        |   1.1.0, 1.0.1, 1.0, 1.0RC3, 1.0RC2, 1.0RC1, 0.10.1, 0.10.0, 0.9.2, 0.9.1, 0.9.0, 0.7.0, 0.5.1 [master repo]
+        |   - Sub specs:
+        |     - AFNetworking/Serialization (2.2.3)
+        |     - AFNetworking/Security (2.2.3)
+        |     - AFNetworking/Reachability (2.2.3)
+        |     - AFNetworking/NSURLConnection (2.2.3)
+        |     - AFNetworking/NSURLSession (2.2.3)
+        |     - AFNetworking/UIKit (2.2.3)
+        |
+        |
+        |-> ACECoreDataNetworkTableViewController (0.0.2)
+        |   Adding pull to refresh to the table view controller included in the ACECoreDataManager.
+        |   pod 'ACECoreDataNetworkTableViewController', '~> 0.0.2'
+        |   - Homepage: https://github.com/acerbetti/ACECoreDataManager
+        |   - Source:   https://github.com/acerbetti/ACECoreDataManager.git
+        |   - Versions: 0.0.2 [master repo]
+        |
+        |
+        |-> AKANetworkLogging (0.1.0)
+        |   Network request logging of customizable verbosity, now with added CURL!
+        |   pod 'AKANetworkLogging', '~> 0.1.0'
+        |   - Homepage: https://github.com/arlophoenix/AKANetworkLogging
+        |   - Source:   https://github.com/arlophoenix/AKANetworkLogging.git
+        |   - Versions: 0.1.0 [master repo]
       EOS
     end
 end

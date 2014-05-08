@@ -1,0 +1,776 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>acerbetti/ACECoreDataManager · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="acerbetti/ACECoreDataManager" name="twitter:title" /><meta content="ACECoreDataManager - Core data utils" name="twitter:description" /><meta content="https://avatars0.githubusercontent.com/u/1741946?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars0.githubusercontent.com/u/1741946?s=400" property="og:image" /><meta content="acerbetti/ACECoreDataManager" property="og:title" /><meta content="https://github.com/acerbetti/ACECoreDataManager" property="og:url" /><meta content="ACECoreDataManager - Core data utils" property="og:description" />
+
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="3A9D7ECD:1FFF:CCF4CEA:536BCF3B" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="nuqc3CuI2PFAX4CDxX78KrB0jsQrdHkXduloUoKjZAiBoSGe7kBBzJOo7rErQz+/n5piDodEIOR6wAI3mxQfkg==" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-342dc1ceccdbd5139c1adebf91586840a05f4b28.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-f50c09aa92f8858777f3f33225ec6b65051ac3de.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+        <script crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/frameworks-a6f92b4988ace11684156397e69ddb85024b3d5a.js" type="text/javascript"></script>
+        <script async="async" crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/github-b8017bfecf4c638ee51a83cabadf2556752a34a6.js" type="text/javascript"></script>
+        
+        
+      <meta http-equiv="x-pjax-version" content="d306d83164c67bcf7dafe5012f0ee572">
+
+      
+  <meta name="description" content="ACECoreDataManager - Core data utils" />
+
+  <meta content="1741946" name="octolytics-dimension-user_id" /><meta content="acerbetti" name="octolytics-dimension-user_login" /><meta content="18616275" name="octolytics-dimension-repository_id" /><meta content="acerbetti/ACECoreDataManager" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="18616275" name="octolytics-dimension-repository_network_root_id" /><meta content="acerbetti/ACECoreDataManager" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/acerbetti/ACECoreDataManager/commits/master.atom" rel="alternate" title="Recent Commits to ACECoreDataManager:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Facerbetti%2FACECoreDataManager">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="acerbetti/ACECoreDataManager"
+      data-branch="master"
+      data-sha="b71e10e80ab14a5c7b5429e3441db993d82c56de"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="acerbetti/ACECoreDataManager" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+    <a href="/login?return_to=%2Facerbetti%2FACECoreDataManager"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>Star
+  </a>
+
+    <a class="social-count js-social-count" href="/acerbetti/ACECoreDataManager/stargazers">
+      2
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Facerbetti%2FACECoreDataManager"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/acerbetti/ACECoreDataManager/network" class="social-count">
+        0
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/acerbetti" class="url fn" itemprop="url" rel="author"><span itemprop="title">acerbetti</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/acerbetti/ACECoreDataManager" class="js-current-repository js-repo-home-link">ACECoreDataManager</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/acerbetti/ACECoreDataManager" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /acerbetti/ACECoreDataManager">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/acerbetti/ACECoreDataManager/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues /acerbetti/ACECoreDataManager/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/acerbetti/ACECoreDataManager/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /acerbetti/ACECoreDataManager/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/acerbetti/ACECoreDataManager/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /acerbetti/ACECoreDataManager/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/acerbetti/ACECoreDataManager/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /acerbetti/ACECoreDataManager/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/acerbetti/ACECoreDataManager/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /acerbetti/ACECoreDataManager/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/acerbetti/ACECoreDataManager.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/acerbetti/ACECoreDataManager.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/acerbetti/ACECoreDataManager" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/acerbetti/ACECoreDataManager" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+                <a href="/acerbetti/ACECoreDataManager/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download acerbetti/ACECoreDataManager as a zip file"
+                   title="Download acerbetti/ACECoreDataManager as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Core data utils</p>
+    </div>
+
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/acerbetti/ACECoreDataManager/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              29
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/acerbetti/ACECoreDataManager/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/acerbetti/ACECoreDataManager/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            2
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+          <a href="/acerbetti/ACECoreDataManager/graphs/contributors" class="js-deferred-content" data-url="/acerbetti/ACECoreDataManager/contributors_size">
+            <span class="num">
+              <span class="octicon octicon-organization"></span>
+            </span>
+            Fetching contributors
+          </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/acerbetti/ACECoreDataManager/search?l=objective-c">
+                <span class="color-block language-color" style="background-color:#438eff;"></span>
+                <span class="lang">Objective-C</span>
+                <span class="percent">83.3%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/acerbetti/ACECoreDataManager/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">13.2%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/acerbetti/ACECoreDataManager/search?l=c">
+                <span class="color-block language-color" style="background-color:#555;"></span>
+                <span class="lang">C</span>
+                <span class="percent">3.6%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#555">
+  <span class="language-color" style="width:83.3%; background-color:#438eff;" itemprop="keywords">Objective-C</span><span class="language-color" style="width:13.2%; background-color:#701516;" itemprop="keywords">Ruby</span><span class="language-color" style="width:3.6%; background-color:#555;" itemprop="keywords">C</span>
+    </a>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/acerbetti/ACECoreDataManager/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped tooltipped-s" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/acerbetti/ACECoreDataManager/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/acerbetti/ACECoreDataManager/tree/0.0.2"
+                 data-name="0.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.0.2">0.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/acerbetti/ACECoreDataManager/tree/0.0.1"
+                 data-name="0.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.0.1">0.0.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/acerbetti/ACECoreDataManager" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">ACECoreDataManager</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2Facerbetti%2FACECoreDataManager" aria-label="Sign in to make or propose changes" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/acerbetti/ACECoreDataManager/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+
+
+  
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/acerbetti/ACECoreDataManager/commit/abb1c4d260f7f7905061aeabbbdf9012502c1b8f" class="message" data-pjax="true" title="fixed existing XCTests">fixed existing XCTests</a>
+        
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="abb1c4d260f7f7905061aeabbbdf9012502c1b8f" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/acerbetti/ACECoreDataManager/commit/abb1c4d260f7f7905061aeabbbdf9012502c1b8f" class="sha-block" data-pjax>latest commit <span class="sha">abb1c4d260</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://1.gravatar.com/avatar/6b4c96589c08109f54329d441cd1e125?d=https%3A%2F%2Fa248.e.akamai.net%2Fassets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" width="20" />
+        <span class="author-name">Stefano Acerbetti</span>
+        authored <local-time class="updated" datetime="2014-05-06T17:07:22-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-06 17:07:22 -0700">May 06, 2014</local-time>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="file-wrap">
+    <table class="files" data-pjax>
+
+      
+<tbody class=""
+  data-url="/acerbetti/ACECoreDataManager/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/tree/master/ACECoreDataManager" class="js-directory-link" id="8506d78ae214549b376877a29562d6da-87787814b695ca0e14202d3479c8bb2b9af33494" title="ACECoreDataManager">ACECoreDataManager</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/abb1c4d260f7f7905061aeabbbdf9012502c1b8f" class="message" data-pjax="true" title="fixed existing XCTests">fixed existing XCTests</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-06T17:07:22-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-06 17:07:22 -0700">May 06, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/tree/master/ACECoreDataManagerDemo.xcodeproj" class="js-directory-link" id="81a3bf636ccfdd87409ec87dd0426748-c4616a21f5be824a5289f29c0d527989bfe5e24c" title="ACECoreDataManagerDemo.xcodeproj">ACECoreDataManagerDemo.xcodeproj</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/ca5f222ef1307d503924d0dd605bcbda1b87e397" class="message" data-pjax="true" title="added the network version of the table controller with pull to refresh support">added the network version of the table controller with pull to refres…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-05T16:04:47-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-05 16:04:47 -0700">May 05, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/tree/master/ACECoreDataManagerDemo" class="js-directory-link" id="c392bcb584e49a66589c0d4754c55070-345bd9c8d339abaad42dc223f594de91ad7f2f51" title="ACECoreDataManagerDemo">ACECoreDataManagerDemo</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/be30cc6fa9f1b7bef4565bbb851016a77a6d4b42" class="message" data-pjax="true" title="little refactor">little refactor</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-19T11:51:11-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-19 11:51:11 -0700">April 19, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/tree/master/ACECoreDataManagerDemoTests" class="js-directory-link" id="2721f9df90acd643e6e474c482e4cd86-f3041ecffdb7f38feb76b32483a332e41bb6bc8d" title="ACECoreDataManagerDemoTests">ACECoreDataManagerDemoTests</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/abb1c4d260f7f7905061aeabbbdf9012502c1b8f" class="message" data-pjax="true" title="fixed existing XCTests">fixed existing XCTests</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-06T17:07:22-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-06 17:07:22 -0700">May 06, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/tree/master/ACECoreDataNetworkTableViewController" class="js-directory-link" id="f91e7ce8f0e0c6516809107f68e3f231-8d94f126a3eef2322d1de637b9d88736f02d7c17" title="ACECoreDataNetworkTableViewController">ACECoreDataNetworkTableViewController</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/ca5f222ef1307d503924d0dd605bcbda1b87e397" class="message" data-pjax="true" title="added the network version of the table controller with pull to refresh support">added the network version of the table controller with pull to refres…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-05T16:04:47-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-05 16:04:47 -0700">May 05, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-submodule"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/samvermette/SVPullToRefresh" data-skip-pjax="true">SVPullToRefresh</a><span class="ref" title="git@github.com:samvermette/SVPullToRefresh.git @ a5f9dfee86a27c4e994d7edf93d0768c881d58bb"> @ <a href="/samvermette/SVPullToRefresh/tree/a5f9dfee86a27c4e994d7edf93d0768c881d58bb" data-skip-pjax="true">a5f9dfe</a></span></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/ca5f222ef1307d503924d0dd605bcbda1b87e397" class="message" data-pjax="true" title="added the network version of the table controller with pull to refresh support">added the network version of the table controller with pull to refres…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-05T16:04:47-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-05 16:04:47 -0700">May 05, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-d522f94191aa772404f9b4eb7bf2dc70055d053e" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/f069eddac30685e9f6c76f987de26fe5604eea20" class="message" data-pjax="true" title="Initial commit">Initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-09T15:52:56-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-09 15:52:56 -0700">April 09, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/.gitmodules" class="js-directory-link" id="8903239df476d7401cf9e76af0252622-964e7d44f953b433f0501051371aa550a0686b34" title=".gitmodules">.gitmodules</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/ca5f222ef1307d503924d0dd605bcbda1b87e397" class="message" data-pjax="true" title="added the network version of the table controller with pull to refresh support">added the network version of the table controller with pull to refres…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-05T16:04:47-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-05 16:04:47 -0700">May 05, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/ACECoreDataManager.podspec" class="js-directory-link" id="8bcc2109712085aac4ed3415c37a14f2-85d6d9242bcd2aa699b881c95c69bb2a53c2cb75" title="ACECoreDataManager.podspec">ACECoreDataManager.podspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/ad9e9eb8eb57c3b7eaac5a211786b9a183d48199" class="message" data-pjax="true" title="added the pod spec">added the pod spec</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-05T15:45:08-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-05 15:45:08 -0700">May 05, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/ACECoreDataNetworkTableViewController.podspec" class="js-directory-link" id="4bc25280e5f8861b5d6fd04e2a2141ff-0daa4c4aea49b6eea23ab5cb3122df57b89e9caf" title="ACECoreDataNetworkTableViewController.podspec">ACECoreDataNetworkTableViewController.podspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/abb1c4d260f7f7905061aeabbbdf9012502c1b8f" class="message" data-pjax="true" title="fixed existing XCTests">fixed existing XCTests</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-05-06T17:07:22-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-05-06 17:07:22 -0700">May 06, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-c68d9f3d1a85085dc98a699a0a95c8d69f2cfee9" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/f069eddac30685e9f6c76f987de26fe5604eea20" class="message" data-pjax="true" title="Initial commit">Initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-09T15:52:56-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-09 15:52:56 -0700">April 09, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-2036f4b1fa44733ef6ca181a450532193cf9ddb6" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/acerbetti/ACECoreDataManager/commit/f069eddac30685e9f6c76f987de26fe5604eea20" class="message" data-pjax="true" title="Initial commit">Initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-09T15:52:56-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-09 15:52:56 -0700">April 09, 2014</local-time></span></td>
+    </tr>
+</tbody>
+
+    </table>
+  </div>
+
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-acecoredatamanager" class="anchor" href="#acecoredatamanager"><span class="octicon octicon-link"></span></a>ACECoreDataManager</h1>
+
+<p>Core data utitls</p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.07954s from github-fe123-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

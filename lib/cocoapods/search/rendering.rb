@@ -7,11 +7,19 @@ module Cocoapods::Search
     end
 
     def render(pods)
+      set_ruled_line_size(pods)
       render_to_header
       render_to_body(pods)
     end
 
     private
+      def set_ruled_line_size(pods)
+        max_pod_name_size = pods.max_by { |pod| pod.name.size }.name.size
+        if max_pod_name_size > DEFAULT_RULED_LINE_SIZE[0]
+          DEFAULT_RULED_LINE_SIZE[0] = max_pod_name_size
+        end
+      end
+
       def render_to_header
         f=DEFAULT_RULED_LINE_SIZE.dup
         fmt = "%-#{f[0]}s %#{f[1]}s %#{f[2]}s %#{f[3]}s"
