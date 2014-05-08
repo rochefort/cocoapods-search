@@ -76,6 +76,20 @@ describe Cocoapods::Search::Cli do
         EOS
       end
     end
+
+    context 'bitbucket pod' do
+      before do
+        Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_bitbucket_pod, '', double(success?: true)])
+      end
+
+      it 'should display with expanding name column' do
+        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+          |Name(Ver)                                 Score  Star  Fork
+          |---------------------------------------- ------ ----- -----
+          |CDSParticleFilter (0.5)                       -     -     -
+        EOS
+      end
+    end
   end
 
   private
@@ -165,6 +179,19 @@ describe Cocoapods::Search::Cli do
         |   - Homepage: https://github.com/arlophoenix/AKANetworkLogging
         |   - Source:   https://github.com/arlophoenix/AKANetworkLogging.git
         |   - Versions: 0.1.0 [master repo]
+      EOS
+    end
+
+    def dummy_pod_search_result_with_bitbucket_pod
+      <<-'EOS'.gsub(/^\s+\|/, '')
+        |
+        |
+        |-> CDSParticleFilter (0.5)
+        |   Implements a particle filter in Objective C
+        |   pod 'CDSParticleFilter', '~> 0.5'
+        |   - Homepage: http://codeswell.com/downloads/ios-particle-filter/
+        |   - Source:   https://bitbucket.org/codeswell/cdsparticlefilter.git
+        |   - Versions: 0.5, 0.4 [master repo]
       EOS
     end
 end

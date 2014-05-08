@@ -29,7 +29,7 @@ module Cocoapods::Search
           first_line = result.lines.to_a[0].strip
           pod.name = first_line
           result.lines.each do |line|
-            if line =~ /- Source:\s+(https?:\/\/.*)\.git/
+            if line =~ /- Source:\s+(https?:\/\/github.*)\.git/
               github_url = $1
               pod.star_count, pod.fork_count = scrape_social_score(github_url)
               pod.has_github = true
