@@ -63,6 +63,9 @@ describe Cocoapods::Search::Cli do
         stub_request_on_github 'arlophoenix/AKANetworkLogging'
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
+
+      after { Cocoapods::Search::Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
+
       it 'should display with expanding name column' do
         expect(capture(:stdout) { @cli.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                      Score  Star  Fork
