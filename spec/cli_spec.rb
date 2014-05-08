@@ -38,9 +38,9 @@ describe Cocoapods::Search::Cli do
 
     context 'with exisiting pods' do
       before do
-        stub_request_on_github 'https://github.com/AaronBratcher/ABSQLite'
-        stub_request_on_github 'https://github.com/dodikk/CsvToSqlite'
-        stub_request_on_github 'https://github.com/youknowone/sqlite3-objc'
+        stub_request_on_github 'AaronBratcher/ABSQLite'
+        stub_request_on_github 'dodikk/CsvToSqlite'
+        stub_request_on_github 'youknowone/sqlite3-objc'
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
       end
 
@@ -58,9 +58,9 @@ describe Cocoapods::Search::Cli do
 
     context 'format with long name pod' do
       before do
-        stub_request_on_github 'https://github.com/acerbetti/ACECoreDataManager'
-        stub_request_on_github 'https://github.com/AFNetworking/AFNetworking'
-        stub_request_on_github 'https://github.com/arlophoenix/AKANetworkLogging'
+        stub_request_on_github 'acerbetti/ACECoreDataManager'
+        stub_request_on_github 'AFNetworking/AFNetworking'
+        stub_request_on_github 'arlophoenix/AKANetworkLogging'
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
       it 'should display with expanding name column' do

@@ -7,9 +7,9 @@ def load_http_stub(file_name)
   File.read(file_path)
 end
 
-def stub_request_on_github(url)
-  project = url.split('/').last
-  stub_request(:get, url).
+def stub_request_on_github(github_url)
+  project = github_url.split('/').last
+  stub_request(:get, "https://github.com/#{github_url}").
     with(:headers => {'Accept'=>'*/*'}).
     to_return(
       :status => 200,
