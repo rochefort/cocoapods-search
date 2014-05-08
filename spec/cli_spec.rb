@@ -56,7 +56,7 @@ describe Cocoapods::Search::Cli do
       end
     end
 
-    context 'format with long name pod' do
+    context 'format with long pod name' do
       before do
         stub_request_on_github 'acerbetti/ACECoreDataManager'
         stub_request_on_github 'AFNetworking/AFNetworking'
@@ -64,7 +64,7 @@ describe Cocoapods::Search::Cli do
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
       it 'should display with expanding name column' do
-        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @cli.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                      Score  Star  Fork
           |--------------------------------------------- ------ ----- -----
           |AFNetworking (2.2.3)                           28241 11941  3260
