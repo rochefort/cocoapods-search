@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Cocoapods::Search::Cli do
+describe Cocoapods::Search::Executor do
   context '#search' do
     before do
-      @cli = Cocoapods::Search::Cli.new
+      @executor = Cocoapods::Search::Executor.new
     end
 
     context 'with nonexistance pods' do
@@ -12,7 +12,7 @@ describe Cocoapods::Search::Cli do
           [dummy_pod_search_nothing, '', double(success?: false)])
       end
       it 'should raise LibraryNotFound' do
-        expect{ @cli.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
+        expect{ @executor.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
       end
     end
 
@@ -22,7 +22,7 @@ describe Cocoapods::Search::Cli do
           ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
       end
       it 'should raise PodError' do
-        expect{ @cli.search('when updating repository') }.to raise_error(Cocoapods::Search::OldRepositoryError)
+        expect{ @executor.search('when updating repository') }.to raise_error(Cocoapods::Search::OldRepositoryError)
       end
     end
 
@@ -32,7 +32,7 @@ describe Cocoapods::Search::Cli do
           ['stdout', 'stderr', double(success?: false)])
       end
       it 'should raise PodError' do
-        expect{ @cli.search('when error occured') }.to raise_error(Cocoapods::Search::PodError)
+        expect{ @executor.search('when error occured') }.to raise_error(Cocoapods::Search::PodError)
       end
     end
 
@@ -45,7 +45,7 @@ describe Cocoapods::Search::Cli do
       end
 
       it 'should display pods ordering by score' do
-        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CsvToSqlite (1.0)                            42    17     5
@@ -67,7 +67,7 @@ describe Cocoapods::Search::Cli do
       after { Cocoapods::Search::Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
 
       it 'should display with expanding name column' do
-        expect(capture(:stdout) { @cli.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                      Score  Star  Fork
           |--------------------------------------------- ------ ----- -----
           |AFNetworking (2.2.3)                           28241 11941  3260
@@ -83,7 +83,7 @@ describe Cocoapods::Search::Cli do
       end
 
       it 'should display with expanding name column' do
-        expect(capture(:stdout) { @cli.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CDSParticleFilter (0.5)                       -     -     -

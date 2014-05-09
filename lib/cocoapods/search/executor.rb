@@ -3,7 +3,7 @@ require 'open3'
 require 'uri'
 
 module Cocoapods::Search
-  class Cli
+  class Executor
     include Cocoapods::Search::Rendering
 
     def initialize
@@ -18,7 +18,7 @@ module Cocoapods::Search
       @keyword = keyword
       pods = get_pods
       pods.sort!{ |x,y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
-      Cli.render(pods)
+      Executor.render(pods)
     end
 
     private
