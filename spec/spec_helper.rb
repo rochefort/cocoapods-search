@@ -1,8 +1,10 @@
 require 'rubygems'
+require 'coveralls'
+Coveralls.wear!
+
 require 'webmock/rspec'
 require 'cocoapods/search'
 require 'simplecov'
-
 SimpleCov.start
 
 def load_http_stub(file_name)
