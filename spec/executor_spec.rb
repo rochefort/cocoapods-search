@@ -1,10 +1,12 @@
 require 'spec_helper'
 
-describe Cocoapods::Search::Executor do
+include Cocoapods::Search
+
+describe Executor do
   context 'proxy settings' do
     before do
       ENV.stub(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
-      executor = Cocoapods::Search::Executor.new
+      executor = Executor.new
       @agent = executor.instance_variable_get(:@agent)
     end
     subject { @agent }
@@ -16,7 +18,7 @@ describe Cocoapods::Search::Executor do
 
   context '#search' do
     before do
-      @executor = Cocoapods::Search::Executor.new
+      @executor = Executor.new
     end
 
     context 'with nonexistance pods' do
@@ -25,7 +27,7 @@ describe Cocoapods::Search::Executor do
           [dummy_pod_search_nothing, '', double(success?: false)])
       end
       it 'should raise LibraryNotFound' do
-        expect{ @executor.search('no_match_pod_name') }.to raise_error(Cocoapods::Search::LibraryNotFound)
+        expect{ @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound)
       end
     end
 
@@ -35,7 +37,7 @@ describe Cocoapods::Search::Executor do
           ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
       end
       it 'should raise PodError' do
-        expect{ @executor.search('when updating repository') }.to raise_error(Cocoapods::Search::OldRepositoryError)
+        expect{ @executor.search('when updating repository') }.to raise_error(OldRepositoryError)
       end
     end
 
@@ -45,7 +47,7 @@ describe Cocoapods::Search::Executor do
           ['stdout', 'stderr', double(success?: false)])
       end
       it 'should raise PodError' do
-        expect{ @executor.search('when error occured') }.to raise_error(Cocoapods::Search::PodError)
+        expect{ @executor.search('when error occured') }.to raise_error(PodError)
       end
     end
 
@@ -77,7 +79,7 @@ describe Cocoapods::Search::Executor do
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
 
-      after { Cocoapods::Search::Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
+      after { Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
 
       it 'should display with expanding name column' do
         expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
