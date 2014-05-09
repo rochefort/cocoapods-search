@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'webmock/rspec'
 require 'cocoapods/search'
+require 'simplecov'
+
+SimpleCov.start
 
 def load_http_stub(file_name)
   file_path = File.join(File.dirname(__FILE__), 'http_stubs', file_name)
