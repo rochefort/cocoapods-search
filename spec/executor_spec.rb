@@ -1,6 +1,19 @@
 require 'spec_helper'
 
 describe Cocoapods::Search::Executor do
+  context 'proxy settings' do
+    before do
+      ENV.stub(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
+      executor = Cocoapods::Search::Executor.new
+      @agent = executor.instance_variable_get(:@agent)
+    end
+    subject { @agent }
+    its(:proxy_addr) { should eq '192.168.1.99' }
+    its(:proxy_user) { should eq 'proxy_user' }
+    its(:proxy_pass) { should eq 'proxy_pass' }
+    its(:proxy_port) { should eq 9999 }
+  end
+
   context '#search' do
     before do
       @executor = Cocoapods::Search::Executor.new
