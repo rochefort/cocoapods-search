@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/rochefort/cocoapods-search.png)](http://travis-ci.org/rochefort/cocoapods-search)
+[![Coverage Status](https://coveralls.io/repos/rochefort/cocoapods-search/badge.png)](https://coveralls.io/r/rochefort/cocoapods-search)
 [![Gem Version](https://badge.fury.io/rb/cocoapods-search.svg)](http://badge.fury.io/rb/cocoapods-search)
 
 # cocoapods-search
