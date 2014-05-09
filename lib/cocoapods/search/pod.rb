@@ -4,10 +4,6 @@ module Cocoapods::Search
   class Pod
     attr_accessor :name, :star_count, :fork_count, :has_github
 
-    def initilaize
-      @has_github = false
-    end
-
     def score
       if @has_github
         @star_count + @fork_count * 5
