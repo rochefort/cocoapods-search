@@ -54,7 +54,7 @@ describe Executor do
       end
 
       it 'should display pods ordering by score' do
-        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CsvToSqlite (1.0)                            42    17     5
@@ -76,7 +76,7 @@ describe Executor do
       after { Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
 
       it 'should display with expanding name column' do
-        expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                      Score  Star  Fork
           |--------------------------------------------- ------ ----- -----
           |AFNetworking (2.2.3)                           28241 11941  3260
@@ -92,7 +92,7 @@ describe Executor do
       end
 
       it 'should display with expanding name column' do
-        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.gsub(/^\s+\|/, '')
+        expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CDSParticleFilter (0.5)                       -     -     -
@@ -107,7 +107,7 @@ describe Executor do
     end
 
     def dummy_pod_search_result
-      <<-'EOS'.gsub(/^\s+\|/, '')
+      <<-'EOS'.unindent
         |
         |
         |-> ABSQLite (1.2.0)
@@ -155,7 +155,7 @@ describe Executor do
     end
 
     def dummy_pod_search_result_with_long_name
-      <<-'EOS'.gsub(/^\s+\|/, '')
+      <<-'EOS'.unindent
         |
         |
         |-> AFNetworking (2.2.3)
@@ -192,7 +192,7 @@ describe Executor do
     end
 
     def dummy_pod_search_result_with_bitbucket_pod
-      <<-'EOS'.gsub(/^\s+\|/, '')
+      <<-'EOS'.unindent
         |
         |
         |-> CDSParticleFilter (0.5)
