@@ -1,5 +1,3 @@
-require 'rubygems'
-
 module Cocoapods
   module Search
     class LibraryNotFound    < StandardError; end
