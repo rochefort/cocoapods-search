@@ -20,7 +20,7 @@ module Cocoapods::Search
       if @has_github
         [@name, score.to_s, @star_count.to_s, @fork_count.to_s]
       else
-        [@name, '-', '-', '-', '-']
+        [@name, '-', '-', '-']
       end
     end
   end
