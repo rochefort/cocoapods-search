@@ -26,9 +26,7 @@ describe Executor do
         Open3.should_receive(:capture3).and_return(
           [dummy_pod_search_nothing, '', double(success?: false)])
       end
-      it 'should raise LibraryNotFound' do
-        expect{ @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound)
-      end
+      it { expect{ @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound) }
     end
 
     context 'updating repository' do
@@ -36,9 +34,7 @@ describe Executor do
         Open3.should_receive(:capture3).and_return(
           ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
       end
-      it 'should raise PodError' do
-        expect{ @executor.search('when updating repository') }.to raise_error(OldRepositoryError)
-      end
+      it { expect{ @executor.search('when updating repository') }.to raise_error(OldRepositoryError) }
     end
 
     context 'occored pods error' do
@@ -46,9 +42,7 @@ describe Executor do
         Open3.should_receive(:capture3).and_return(
           ['stdout', 'stderr', double(success?: false)])
       end
-      it 'should raise PodError' do
-        expect{ @executor.search('when error occured') }.to raise_error(PodError)
-      end
+      it { expect{ @executor.search('when error occured') }.to raise_error(PodError) }
     end
 
     context 'with exisiting pods' do
