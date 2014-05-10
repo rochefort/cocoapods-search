@@ -16,7 +16,7 @@ module Cocoapods::Search
     desc 'search [NAME]', 'Search cocopapods'
     def search(name = nil)
       return invoke :help unless name
-      cs = Cocoapods::Search::Executor.new
+      cs = Executor.new
       cs.search(name)
     rescue LibraryNotFound => e
       say e.message, :red
