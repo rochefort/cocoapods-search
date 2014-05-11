@@ -76,7 +76,7 @@ describe Executor do
       after do
         # reset initialize
         # warning measure: already initialized constant
-        [40, 6, 5, 5].each_with_index { |n, i| Rendering::DEFAULT_RULED_LINE_SIZE[i] = n }}
+        [40, 6, 5, 5].each_with_index { |n, i| Rendering::DEFAULT_RULED_LINE_SIZE[i] = n }
       end
 
       it 'display with expanding name column' do
