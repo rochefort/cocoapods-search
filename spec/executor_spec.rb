@@ -53,7 +53,7 @@ describe Executor do
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
       end
 
-      it 'should display pods ordering by score' do
+      it 'display pods ordering by score' do
         expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
@@ -79,7 +79,7 @@ describe Executor do
         [40, 6, 5, 5].each_with_index { |n, i| Rendering::DEFAULT_RULED_LINE_SIZE[i] = n }}
       end
 
-      it 'should display with expanding name column' do
+      it 'display with expanding name column' do
         expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                      Score  Star  Fork
           |--------------------------------------------- ------ ----- -----
@@ -95,7 +95,7 @@ describe Executor do
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_bitbucket_pod, '', double(success?: true)])
       end
 
-      it 'should display with expanding name column' do
+      it 'display with expanding name column' do
         expect(capture(:stdout) { @executor.search('sqlite') }).to eq <<-'EOS'.unindent
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
