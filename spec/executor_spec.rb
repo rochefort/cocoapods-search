@@ -73,7 +73,11 @@ describe Executor do
         Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
 
-      after { Rendering::DEFAULT_RULED_LINE_SIZE = [40, 6, 5, 5] }
+      after do
+        # reset initialize
+        # warning measure: already initialized constant
+        [40, 6, 5, 5].each_with_index { |n, i| Rendering::DEFAULT_RULED_LINE_SIZE[i] = n }}
+      end
 
       it 'should display with expanding name column' do
         expect(capture(:stdout) { @executor.search('long_pod_name') }).to eq <<-'EOS'.unindent
