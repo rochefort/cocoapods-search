@@ -3,21 +3,21 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cocoapods/search/version'
 
+def install_message
+  s = ''
+  s << "\xf0\x9f\x8d\xba  " if or_over_mac_os_lion?
+  s << "Thanks for installing!"
+end
+
+def or_over_mac_os_lion?
+  return false unless RUBY_PLATFORM =~ /darwin/
+
+  macos_full_version = `/usr/bin/sw_vers -productVersion`.chomp
+  macos_version = macos_full_version[/10\.\d+/]
+  return macos_version >= '10.7'  # 10.7 is lion
+end
+
 Gem::Specification.new do |spec|
-  def install_message
-    s = ''
-    s << "\xf0\x9f\x8d\xba  " if or_over_mac_os_lion?
-    s << "Thanks for installing!"
-  end
-
-  def or_over_mac_os_lion?
-    return false unless RUBY_PLATFORM =~ /darwin/
-
-    macos_full_version = `/usr/bin/sw_vers -productVersion`.chomp
-    macos_version = macos_full_version[/10\.\d+/]
-    return macos_version >= '10.7'  # 10.7 is lion
-  end
-
   spec.name          = "cocoapods-search"
   spec.version       = Cocoapods::Search::VERSION
   spec.authors       = ["rochefort"]
