@@ -4,6 +4,7 @@ Coveralls.wear!
 require 'webmock/rspec'
 require 'cocoapods/search'
 require 'simplecov'
+require 'rspec/its'
 SimpleCov.start
 
 def load_http_stub(file_name)
