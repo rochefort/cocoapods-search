@@ -28,6 +28,9 @@ module Cocoapods::Search
       abort
     rescue PodError => e
       say e.message
+      if e.message =~ /rbenv: pod: command not found/
+        say "Plz install and setup cocoapods.\n  gem install cocoapods\n  pod setup"
+      end
       abort
     end
 
