@@ -5,7 +5,7 @@ include Cocoapods::Search
 describe Executor do
   context 'proxy settings' do
     before do
-      ENV.stub(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
+      allow(ENV).to receive(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
       executor = Executor.new
       @agent = executor.instance_variable_get(:@agent)
     end
@@ -23,7 +23,7 @@ describe Executor do
 
     context 'with nonexistance pods' do
       before do
-        Open3.should_receive(:capture3).and_return(
+        expect(Open3).to receive(:capture3).and_return(
           [dummy_pod_search_nothing, '', double(success?: false)])
       end
       it { expect{ @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound) }
@@ -31,7 +31,7 @@ describe Executor do
 
     context 'updating repository' do
       before do
-        Open3.should_receive(:capture3).and_return(
+        expect(Open3).to receive(:capture3).and_return(
           ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
       end
       it { expect{ @executor.search('when updating repository') }.to raise_error(OldRepositoryError) }
@@ -39,7 +39,7 @@ describe Executor do
 
     context 'occored pods error' do
       before do
-        Open3.should_receive(:capture3).and_return(
+        expect(Open3).to receive(:capture3).and_return(
           ['stdout', 'stderr', double(success?: false)])
       end
       it { expect{ @executor.search('when error occured') }.to raise_error(PodError) }
@@ -50,7 +50,7 @@ describe Executor do
         stub_request_on_github 'AaronBratcher/ABSQLite'
         stub_request_on_github 'dodikk/CsvToSqlite'
         stub_request_on_github 'youknowone/sqlite3-objc'
-        Open3.should_receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
+        expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
       end
 
       it 'display pods ordering by score' do
@@ -70,7 +70,7 @@ describe Executor do
         stub_request_on_github 'acerbetti/ACECoreDataManager'
         stub_request_on_github 'AFNetworking/AFNetworking'
         stub_request_on_github 'arlophoenix/AKANetworkLogging'
-        Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
+        expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
 
       after do
@@ -92,7 +92,7 @@ describe Executor do
 
     context 'bitbucket pod' do
       before do
-        Open3.should_receive(:capture3).and_return([dummy_pod_search_result_with_bitbucket_pod, '', double(success?: true)])
+        allow(Open3).to receive(:capture3).and_return([dummy_pod_search_result_with_bitbucket_pod, '', double(success?: true)])
       end
 
       it 'display with expanding name column' do
