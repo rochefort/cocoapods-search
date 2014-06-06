@@ -7,6 +7,10 @@ require 'simplecov'
 require 'rspec/its'
 SimpleCov.start
 
+RSpec.configure do |config|
+  config.expose_dsl_globally = false
+end
+
 def load_http_stub(file_name)
   file_path = File.join(File.dirname(__FILE__), 'http_stubs', file_name)
   File.read(file_path)
