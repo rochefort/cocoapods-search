@@ -6,10 +6,9 @@ RSpec.describe Executor do
   describe 'proxy settings' do
     before do
       allow(ENV).to receive(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
-      executor = Executor.new
-      @agent = executor.instance_variable_get(:@agent)
+      @executor = Executor.new
     end
-    subject { @agent }
+    subject { @executor.instance_variable_get(:@agent) }
     its(:proxy_addr) { should eq '192.168.1.99' }
     its(:proxy_user) { should eq 'proxy_user' }
     its(:proxy_pass) { should eq 'proxy_pass' }
