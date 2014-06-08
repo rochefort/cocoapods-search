@@ -1,5 +1,3 @@
-require 'mechanize'
-
 module Cocoapods::Search
   class Pod
     attr_accessor :name, :star_count, :fork_count, :has_github
