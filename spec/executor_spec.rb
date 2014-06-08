@@ -3,7 +3,7 @@ require 'spec_helper'
 include Cocoapods::Search
 
 RSpec.describe Executor do
-  context 'proxy settings' do
+  describe 'proxy settings' do
     before do
       allow(ENV).to receive(:[]).with('http_proxy').and_return('http://proxy_user:proxy_pass@192.168.1.99:9999')
       executor = Executor.new
@@ -16,7 +16,7 @@ RSpec.describe Executor do
     its(:proxy_port) { should eq 9999 }
   end
 
-  context '#search' do
+  describe '#search' do
     before do
       @executor = Executor.new
     end
