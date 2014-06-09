@@ -1,5 +1,6 @@
 [![Build Status](http://img.shields.io/travis/rochefort/cocoapods-search.svg?style=flat)](http://travis-ci.org/rochefort/cocoapods-search)
 [![Coverage Status](http://img.shields.io/coveralls/rochefort/cocoapods-search.svg?style=flat)](https://coveralls.io/r/rochefort/cocoapods-search)
+[![Code Climate](http://img.shields.io/codeclimate/github/rochefort/cocoapods-search.svg?style=flat)](https://codeclimate.com/github/rochefort/cocoapods-search)
 [![Gem Version](http://img.shields.io/gem/v/cocoapods-search.svg?style=flat)](http://badge.fury.io/rb/cocoapods-search)
 
 # cocoapods-search
