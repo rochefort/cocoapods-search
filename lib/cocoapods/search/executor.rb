@@ -14,9 +14,12 @@ module Cocoapods::Search
     end
 
     def search(keyword)
+      print 'Searching '
       @keyword = keyword
-      pods = get_pods
+      pods = get_pods { print '.' }
       pods.sort!{ |x,y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
+      puts
+      pods
     end
 
     private
@@ -29,7 +32,7 @@ module Cocoapods::Search
           result.lines.each do |line|
             if line =~ /- Source:\s+(https?:\/\/github.*)\.git/
               github_url = $1
-              pod.star_count, pod.fork_count = scrape_social_score(github_url)
+              pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
               pod.has_github = true
             end
           end
@@ -49,6 +52,7 @@ module Cocoapods::Search
       end
 
       def scrape_social_score(url)
+        yield
         page = @agent.get(url)
         page.search(".social-count").map{ |elm| elm.text.strip.gsub(',', '').to_i }
       end

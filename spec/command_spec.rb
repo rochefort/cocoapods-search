@@ -18,6 +18,7 @@ RSpec.describe Command do
 
       it 'display pods ordering by score' do
         res = <<-'EOS'.unindent
+          |Searching ...
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CsvToSqlite (1.0)                            42    17     5
@@ -39,6 +40,7 @@ RSpec.describe Command do
 
       it 'display with expanding name column' do
         res = <<-'EOS'.unindent
+          |Searching ...
           |Name(Ver)                                      Score  Star  Fork
           |--------------------------------------------- ------ ----- -----
           |AFNetworking (2.2.3)                           28241 11941  3260
@@ -56,6 +58,7 @@ RSpec.describe Command do
 
       it 'display with expanding name column' do
         res = <<-'EOS'.unindent
+          |Searching 
           |Name(Ver)                                 Score  Star  Fork
           |---------------------------------------- ------ ----- -----
           |CDSParticleFilter (0.5)                       -     -     -
