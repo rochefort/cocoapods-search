@@ -4,7 +4,6 @@ require 'uri'
 
 module Cocoapods::Search
   class Executor
-    include Cocoapods::Search::Rendering
 
     def initialize
       @agent = Mechanize.new
@@ -18,7 +17,6 @@ module Cocoapods::Search
       @keyword = keyword
       pods = get_pods
       pods.sort!{ |x,y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
-      Executor.render(pods)
     end
 
     private

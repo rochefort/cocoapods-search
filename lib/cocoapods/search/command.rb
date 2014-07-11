@@ -3,6 +3,8 @@ require 'thor'
 
 module Cocoapods::Search
   class Command < Thor
+    include Rendering
+
     map '-v' => :version,
         '--version' => :version
 
@@ -17,7 +19,8 @@ module Cocoapods::Search
     def search(name = nil)
       return invoke :help unless name
       cs = Executor.new
-      cs.search(name)
+      pods = cs.search(name)
+      Command.render(pods)
     rescue LibraryNotFound => e
       say e.message, :red
       abort
