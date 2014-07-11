@@ -37,12 +37,6 @@ RSpec.describe Command do
         expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result_with_long_name, '', double(success?: true)])
       end
 
-      after do
-        # reset initialize
-        # warning measure: already initialized constant
-        [40, 6, 5, 5].each_with_index { |n, i| Rendering::DEFAULT_RULED_LINE_SIZE[i] = n }
-      end
-
       it 'display with expanding name column' do
         res = <<-'EOS'.unindent
           |Name(Ver)                                      Score  Star  Fork

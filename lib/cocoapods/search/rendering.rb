@@ -14,14 +14,15 @@ module Cocoapods::Search
 
     private
       def set_ruled_line_size(pods)
+        @ruled_line_size = DEFAULT_RULED_LINE_SIZE.dup
         max_pod_name_size = pods.max_by { |pod| pod.name.size }.name.size
-        if max_pod_name_size > DEFAULT_RULED_LINE_SIZE[0]
-          DEFAULT_RULED_LINE_SIZE[0] = max_pod_name_size
+        if max_pod_name_size > @ruled_line_size[0]
+          @ruled_line_size[0] = max_pod_name_size
         end
       end
 
       def render_with
-        f = DEFAULT_RULED_LINE_SIZE.dup
+        f = @ruled_line_size
         fmt = "%-#{f[0]}s %#{f[1]}s %#{f[2]}s %#{f[3]}s"
         yield(f, fmt)
       end
