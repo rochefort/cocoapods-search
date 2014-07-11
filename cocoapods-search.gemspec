@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'mechanize', '~> 2.7.3'
   spec.add_dependency 'thor',      '~> 0.19.1'
+  spec.add_dependency 'cocoapods'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 
