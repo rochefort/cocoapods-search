@@ -41,18 +41,18 @@ module Cocoapods::Search
 
     def pod_search
       result, error, status = Open3.capture3("pod search --no-ansi #{@keyword}")
-      raise LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
-      raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
-      raise PodError, "#{result} #{error}" unless status.success?
+      fail LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
+      fail OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
+      fail PodError, "#{result} #{error}" unless status.success?
       pods = result.split(/\n{2,3}->/)
-      pods.delete("")
+      pods.delete('')
       pods
     end
 
     def scrape_social_score(url)
       yield
       page = @agent.get(url)
-      page.search(".social-count").map{ |elm| elm.text.strip.gsub(',', '').to_i }
+      page.search('.social-count').map { |elm| elm.text.strip.gsub(',', '').to_i }
     end
   end
 end
