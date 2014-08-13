@@ -19,12 +19,12 @@ end
 
 def stub_request_on_github(github_url)
   project = github_url.split('/').last
-  stub_request(:get, "https://github.com/#{github_url}").
-    with(:headers => {'Accept'=>'*/*'}).
-    to_return(
-      :status => 200,
-      :headers => {content_type: 'text/html'},
-      :body => load_http_stub(project))
+  stub_request(:get, "https://github.com/#{github_url}")
+    .with(headers: { 'Accept'=>'*/*' })
+    .to_return(
+      status: 200,
+      headers: { content_type: 'text/html' },
+      body: load_http_stub(project))
 end
 
 class String

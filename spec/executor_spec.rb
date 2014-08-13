@@ -25,7 +25,7 @@ RSpec.describe Executor do
         expect(Open3).to receive(:capture3).and_return(
           [dummy_pod_search_nothing, '', double(success?: false)])
       end
-      it { expect{ @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound) }
+      it { expect { @executor.search('no_match_pod_name') }.to raise_error(LibraryNotFound) }
     end
 
     context 'updating repository' do
@@ -33,7 +33,7 @@ RSpec.describe Executor do
         expect(Open3).to receive(:capture3).and_return(
           ["Setting up CocoaPods master repo\Updating 64e7f15..96d38c5", 'stderr', double(success?: true)])
       end
-      it { expect{ @executor.search('when updating repository') }.to raise_error(OldRepositoryError) }
+      it { expect { @executor.search('when updating repository') }.to raise_error(OldRepositoryError) }
     end
 
     context 'occored pods error' do
@@ -41,12 +41,13 @@ RSpec.describe Executor do
         expect(Open3).to receive(:capture3).and_return(
           ['stdout', 'stderr', double(success?: false)])
       end
-      it { expect{ @executor.search('when error occured') }.to raise_error(PodError) }
+      it { expect { @executor.search('when error occured') }.to raise_error(PodError) }
     end
   end
 
   private
-    def dummy_pod_search_nothing
-      "[!] Unable to find a pod with name matching `no_match_pod_name'"
-    end
+
+  def dummy_pod_search_nothing
+    "[!] Unable to find a pod with name matching `no_match_pod_name'"
+  end
 end
