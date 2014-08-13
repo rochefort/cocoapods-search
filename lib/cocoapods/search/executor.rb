@@ -13,45 +13,46 @@ module Cocoapods::Search
     def search(keyword)
       print 'Searching '
       @keyword = keyword
-      pods = get_pods { print '.' }
-      pods.sort!{ |x,y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
+      pods = search_pods { print '.' }
+      pods.sort! { |x, y| [y.score, x.name.upcase] <=> [x.score, y.name.upcase] }
       puts
       pods
     end
 
     private
-      def get_pods
-        pods = []
-        pod_search.each do |result|
-          pod = Pod.new
-          first_line = result.lines.to_a[0].strip
-          pod.name = first_line
-          result.lines.each do |line|
-            if line =~ /- Source:\s+(https?:\/\/github.*)\.git/
-              github_url = $1
-              pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
-              pod.has_github = true
-            end
+
+    def search_pods
+      pods = []
+      pod_search.each do |result|
+        pod = Pod.new
+        first_line = result.lines.to_a[0].strip
+        pod.name = first_line
+        result.lines.each do |line|
+          if line =~ %r{- Source:\s+(https?://github.*)\.git}
+            github_url = $1
+            pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
+            pod.has_github = true
           end
-          pods << pod
         end
-        pods
+        pods << pod
       end
+      pods
+    end
 
-      def pod_search
-        result, error, status = Open3.capture3("pod search --no-ansi #{@keyword}")
-        raise LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
-        raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
-        raise PodError, "#{result} #{error}" unless status.success?
-        pods = result.split(/\n{2,3}->/)
-        pods.delete("")
-        pods
-      end
+    def pod_search
+      result, error, status = Open3.capture3("pod search --no-ansi #{@keyword}")
+      raise LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
+      raise OldRepositoryError, result if result =~ /Setting up CocoaPods master repo/
+      raise PodError, "#{result} #{error}" unless status.success?
+      pods = result.split(/\n{2,3}->/)
+      pods.delete("")
+      pods
+    end
 
-      def scrape_social_score(url)
-        yield
-        page = @agent.get(url)
-        page.search(".social-count").map{ |elm| elm.text.strip.gsub(',', '').to_i }
-      end
+    def scrape_social_score(url)
+      yield
+      page = @agent.get(url)
+      page.search(".social-count").map{ |elm| elm.text.strip.gsub(',', '').to_i }
+    end
   end
 end
