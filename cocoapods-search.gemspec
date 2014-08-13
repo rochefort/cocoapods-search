@@ -6,7 +6,7 @@ require 'cocoapods/search/version'
 def install_message
   s = ''
   s << "\xf0\x9f\x8d\xba  " if or_over_mac_os_lion?
-  s << "Thanks for installing!"
+  s << 'Thanks for installing!'
 end
 
 def or_over_mac_os_lion?
@@ -14,23 +14,23 @@ def or_over_mac_os_lion?
 
   macos_full_version = `/usr/bin/sw_vers -productVersion`.chomp
   macos_version = macos_full_version[/10\.\d+/]
-  return macos_version >= '10.7'  # 10.7 is lion
+  macos_version >= '10.7'  # 10.7 is lion
 end
 
 Gem::Specification.new do |spec|
-  spec.name          = "cocoapods-search"
+  spec.name          = 'cocoapods-search'
   spec.version       = Cocoapods::Search::VERSION
-  spec.authors       = ["rochefort"]
-  spec.email         = ["terasawan@gmail.com"]
-  spec.summary       = "search cocopods while sorting by github score"
+  spec.authors       = ['rochefort']
+  spec.email         = ['terasawan@gmail.com']
+  spec.summary       = 'search cocopods while sorting by github score'
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/rochefort/cocoapods-search"
-  spec.license       = "MIT"
+  spec.homepage      = 'https://github.com/rochefort/cocoapods-search'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   spec.post_install_message = install_message
 
