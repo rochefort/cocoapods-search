@@ -4,13 +4,10 @@ require 'uri'
 
 module Cocoapods::Search
   class Executor
-
     def initialize
       @agent = Mechanize.new
       proxy = URI.parse(ENV['http_proxy']) if ENV['http_proxy']
-      if proxy
-        @agent.set_proxy(proxy.host, proxy.port, proxy.user, proxy.password)
-      end
+      @agent.set_proxy(proxy.host, proxy.port, proxy.user, proxy.password) if proxy
     end
 
     def search(keyword)
