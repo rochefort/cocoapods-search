@@ -17,9 +17,7 @@ module Cocoapods::Search
     def ruled_line_size(pods)
       @ruled_line_size = DEFAULT_RULED_LINE_SIZE.dup
       max_pod_name_size = pods.max_by { |pod| pod.name.size }.name.size
-      if max_pod_name_size > @ruled_line_size[0]
-        @ruled_line_size[0] = max_pod_name_size
-      end
+      @ruled_line_size[0] = max_pod_name_size if max_pod_name_size > @ruled_line_size[0]
     end
 
     def render_with
@@ -31,12 +29,12 @@ module Cocoapods::Search
     def render_to_header
       render_with do |fields, fmt|
         puts fmt % ['Name(Ver)', 'Score', 'Star', 'Fork']
-        puts fmt % fields.map{ |f| '-'*f }
+        puts fmt % fields.map { |f| '-'*f }
       end
     end
 
     def render_to_body(pods)
-      render_with do |fields, fmt|
+      render_with do |_fields, fmt|
         pods.each { |pod| puts fmt % pod.to_a }
       end
     end
