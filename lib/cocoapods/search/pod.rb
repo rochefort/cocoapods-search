@@ -2,6 +2,10 @@ module Cocoapods::Search
   class Pod
     attr_accessor :name, :star_count, :fork_count
 
+    def initialize
+      @star_count, @fork_count = nil, nil
+    end
+
     def score
       if github?
         @star_count + @fork_count * 5

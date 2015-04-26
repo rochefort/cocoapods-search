@@ -40,9 +40,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 
-  spec.add_development_dependency 'rspec',       '~> 3.0.0'
-  spec.add_development_dependency 'rspec-its',   '~> 1.0.1'
-  spec.add_development_dependency 'simplecov',   '~> 0.8.2'
+  spec.add_development_dependency 'rspec',       '~> 3.2.0'
+  spec.add_development_dependency 'rspec-its',   '~> 1.2.0'
+  spec.add_development_dependency 'simplecov',   '~> 0.10.0'
   spec.add_development_dependency 'guard',       '~> 2.6.0'
   spec.add_development_dependency 'guard-rspec', '~> 4.2.8'
   spec.add_development_dependency 'webmock',     '~> 1.17.4'
