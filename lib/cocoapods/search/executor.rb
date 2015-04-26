@@ -31,7 +31,7 @@ module Cocoapods::Search
           if line =~ %r{- Source:\s+(https?://github.*)\.git}
             github_url = $1
             pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
-            pod.has_github = true
+            pod.has_github = true if pod.star_count || pod.fork_count
           end
         end
         pods << pod
@@ -49,10 +49,13 @@ module Cocoapods::Search
       pods
     end
 
+    # @return [Array] star_count and fork_count
     def scrape_social_score(url)
       yield
       page = @agent.get(url)
       page.search('.social-count').map { |elm| elm.text.strip.gsub(',', '').to_i }
+      rescue Mechanize::ResponseCodeError
+        return nil
     end
   end
 end

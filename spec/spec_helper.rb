@@ -27,6 +27,15 @@ def stub_request_on_github(github_url)
       body: load_http_stub(project))
 end
 
+def stub_request_on_github_with_404
+  stub_request(:get, "https://github.com/stub404/stub404")
+    .with(headers: { 'Accept'=>'*/*' })
+    .to_return(
+      status: 404,
+      headers: { content_type: 'text/html' })
+end
+
+
 class String
   def unindent
     gsub(/^\s+\|/, '')

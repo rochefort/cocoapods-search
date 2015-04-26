@@ -9,24 +9,42 @@ RSpec.describe Command do
       @cmd = Command.new
     end
     context 'with exisiting pods' do
-      before do
-        stub_request_on_github 'AaronBratcher/ABSQLite'
-        stub_request_on_github 'dodikk/CsvToSqlite'
-        stub_request_on_github 'youknowone/sqlite3-objc'
-        expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
+      context 'github site is existing' do
+        before do
+          stub_request_on_github 'AaronBratcher/ABSQLite'
+          stub_request_on_github 'dodikk/CsvToSqlite'
+          stub_request_on_github 'youknowone/sqlite3-objc'
+          expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result, '', double(success?: true)])
+        end
+
+        it 'display pods ordering by score' do
+          res = <<-'EOS'.unindent
+            |Searching ...
+            |Name(Ver)                                 Score  Star  Fork
+            |---------------------------------------- ------ ----- -----
+            |CsvToSqlite (1.0)                            42    17     5
+            |sqlite3-objc (0.2)                           17    12     1
+            |ABSQLite (1.2.0)                              5     5     0
+            |sqlite3 (3.8.4.3)                             -     -     -
+          EOS
+          expect { @cmd.invoke(:search, ['sqlite']) }.to output(res).to_stdout
+        end
       end
 
-      it 'display pods ordering by score' do
-        res = <<-'EOS'.unindent
-          |Searching ...
-          |Name(Ver)                                 Score  Star  Fork
-          |---------------------------------------- ------ ----- -----
-          |CsvToSqlite (1.0)                            42    17     5
-          |sqlite3-objc (0.2)                           17    12     1
-          |ABSQLite (1.2.0)                              5     5     0
-          |sqlite3 (3.8.4.3)                             -     -     -
-        EOS
-        expect { @cmd.invoke(:search, ['sqlite']) }.to output(res).to_stdout
+      context 'github site is not existing(status code of source is 404)' do
+        before do
+          stub_request_on_github_with_404
+          expect(Open3).to receive(:capture3).and_return([dummy_pod_search_result_with_404, '', double(success?: true)])
+        end
+        it 'display pods ordering by score' do
+          res = <<-'EOS'.unindent
+            |Searching .
+            |Name(Ver)                                 Score  Star  Fork
+            |---------------------------------------- ------ ----- -----
+            |JNLineChart (0.0.3)                           -     -     -
+          EOS
+          expect { @cmd.invoke(:search, ['stub404']) }.to output(res).to_stdout
+        end
       end
     end
 
@@ -165,6 +183,20 @@ RSpec.describe Command do
       |   - Homepage: http://codeswell.com/downloads/ios-particle-filter/
       |   - Source:   https://bitbucket.org/codeswell/cdsparticlefilter.git
       |   - Versions: 0.5, 0.4 [master repo]
+    EOS
+  end
+
+  # status code is 404 if Source incude `stub404/stub404`
+  def dummy_pod_search_result_with_404
+    <<-'EOS'.unindent
+      |
+      |
+      |-> JNLineChart (0.0.3)
+      |   A simple line chart library.
+      |   pod 'JNLineChart', '~> 0.0.3'
+      |   - Homepage: https://github.com/jnic/JNLineChart
+      |   - Source:   https://github.com/stub404/stub404.git
+      |   - Versions: 0.0.3, 0.0.2, 0.0.1 [master repo]
     EOS
   end
 end
