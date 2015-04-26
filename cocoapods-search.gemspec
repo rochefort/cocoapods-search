@@ -48,6 +48,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock',     '~> 1.17.4'
   spec.add_development_dependency 'pry',         '~> 0.10.0'
   spec.add_development_dependency 'pry-byebug',  '~> 1.3.3'
+  spec.add_development_dependency 'safe_yaml', '~> 1.0.4' # for Ruby2.2.0
 
   spec.add_development_dependency 'coveralls'
 end
