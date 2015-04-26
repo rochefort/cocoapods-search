@@ -1,8 +1,8 @@
 module Cocoapods
   module Search
-    class LibraryNotFound    < StandardError; end
+    class LibraryNotFound < StandardError; end
     class OldRepositoryError < StandardError; end
-    class PodError           < StandardError; end
+    class PodError < StandardError; end
 
     autoload :Command,   'cocoapods/search/command'
     autoload :Executor,  'cocoapods/search/executor'

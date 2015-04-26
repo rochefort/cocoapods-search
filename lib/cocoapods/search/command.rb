@@ -38,8 +38,9 @@ module Cocoapods::Search
     end
 
     private
-      def method_missing(name)
-        Command.start ['search', name.to_s]
-      end
+
+    def method_missing(name)
+      Command.start ['search', name.to_s]
+    end
   end
 end
