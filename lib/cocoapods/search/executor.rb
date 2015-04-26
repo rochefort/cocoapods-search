@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'mechanize'
 require 'open3'
 require 'uri'
@@ -22,22 +23,19 @@ module Cocoapods::Search
     private
 
     def search_pods
-      pods = []
-      pod_search.each do |result|
+      pod_search.map do |result|
         pod = Pod.new
-        first_line = result.lines.to_a[0].strip
-        pod.name = first_line
-        result.lines.each do |line|
-          if line =~ %r{- Source:\s+(https?://github.*)\.git}
-            github_url = $1
-            pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
-          end
+        pod.name = result.lines.to_a[0].strip
+        github_url = extract_github_url(result)
+        if github_url
+          pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
         end
-        pods << pod
+        pod
       end
-      pods
     end
 
+    # pod searchの結果を 改行+`=>` で分割する
+    # @return [Array] pod
     def pod_search
       result, error, status = Open3.capture3("pod search --no-ansi #{@keyword}")
       fail LibraryNotFound, result if result =~ /Unable to find a pod with name matching/
@@ -46,6 +44,13 @@ module Cocoapods::Search
       pods = result.split(/\n{2,3}->/)
       pods.delete('')
       pods
+    end
+
+    def extract_github_url(result)
+      result.lines.each do |line|
+        return $1 if line =~ %r{- Source:\s+(https?://github.*)\.git}
+      end
+      nil
     end
 
     # @return [Array] star_count and fork_count
