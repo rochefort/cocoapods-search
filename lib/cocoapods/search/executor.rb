@@ -31,7 +31,6 @@ module Cocoapods::Search
           if line =~ %r{- Source:\s+(https?://github.*)\.git}
             github_url = $1
             pod.star_count, pod.fork_count = scrape_social_score(github_url) { yield }
-            pod.has_github = true if pod.star_count || pod.fork_count
           end
         end
         pods << pod

@@ -1,13 +1,9 @@
 module Cocoapods::Search
   class Pod
-    attr_accessor :name, :star_count, :fork_count, :has_github
-
-    def initialize
-      @has_github = false
-    end
+    attr_accessor :name, :star_count, :fork_count
 
     def score
-      if @has_github
+      if github?
         @star_count + @fork_count * 5
       else
         0
@@ -15,11 +11,17 @@ module Cocoapods::Search
     end
 
     def to_a
-      if @has_github
+      if github?
         [@name, score.to_s, @star_count.to_s, @fork_count.to_s]
       else
         [@name, '-', '-', '-']
       end
+    end
+
+    private
+
+    def github?
+      @star_count || @fork_count
     end
   end
 end
