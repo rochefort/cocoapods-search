@@ -57,9 +57,9 @@ module Cocoapods::Search
     def scrape_social_score(url)
       yield
       page = @agent.get(url)
-      page.search('.social-count').map { |elm| elm.text.strip.gsub(',', '').to_i }
-      rescue Mechanize::ResponseCodeError
-        return nil
+      page.search('.social-count').map { |elm| elm.text.strip.delete(',').to_i }
+    rescue Mechanize::ResponseCodeError
+      return nil
     end
   end
 end
