@@ -7,11 +7,7 @@ module Cocoapods::Search
     end
 
     def score
-      if github?
-        @star_count + @fork_count * 5
-      else
-        0
-      end
+      github? ? (@star_count + @fork_count * 5) : 0
     end
 
     def to_a
