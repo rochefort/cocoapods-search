@@ -3,7 +3,8 @@ module Cocoapods::Search
     attr_accessor :name, :star_count, :fork_count
 
     def initialize
-      @star_count, @fork_count = nil, nil
+      @star_count = nil
+      @fork_count = nil
     end
 
     def score
