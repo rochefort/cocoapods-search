@@ -5,7 +5,8 @@
 
 # cocoapods-search
 
-cocoapods-search is a command line utitlity like cocoapod('pod search').  
+Now `cocoapod-search` is not published as a rubygem.
+This is a command line utility like 'pod search'.  
 You can see cocoapods with sorting by score on github.  
 
     Score = Star count + (Fork count * 5)
